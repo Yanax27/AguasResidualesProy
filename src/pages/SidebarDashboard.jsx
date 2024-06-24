@@ -79,7 +79,7 @@ const SidebarDashboard = ({ isSidebarOpen, toggleSidebar }) => {
                 </a>
               </li>
             </Link>
-            <Link to={"/dashboard/formpdf"}>
+            <Link to={"/dashboard/reporte"}>
               <li>
                 <a
                   href=""

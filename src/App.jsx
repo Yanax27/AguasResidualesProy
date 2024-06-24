@@ -13,6 +13,8 @@ import Biblioteca from "./pages/Biblioteca";
 import Seleccion from "./pages/Seleccion";
 import AddDatosGuia from "./components/AddDatosGuia";
 import Calculadora from "./pages/Calculadora";
+import Reportes from "./pages/Reportes";
+import DetalleReporte from "./components/DetalleReporte";
 
 
 function App() {
@@ -69,6 +71,8 @@ function App() {
           <Route path="datos" element={<AddDatosGuia />}/>
           <Route path="formpdf" element={<FormularioPDF />}/>
           <Route path="calc" element={<Calculadora />}/>
+          <Route path="reporte" element={<Reportes />}/>
+          <Route path="detalle-reporte/:id" element={<DetalleReporte />}/>
         </Route>
         <Route path="*" element={<NotFound />} />
         <Route path="/login" element={<Login />} />

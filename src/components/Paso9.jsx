@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import swal from "sweetalert";
 import { getImg } from "../services/firestoreService";
 import SpinnerPdf from "./SpinnerPdf";
+import { db } from '../data/FireBase';
+import { collection, addDoc } from "firebase/firestore";
 
 const Paso9 = () => {
   const [matchingImages, setMatchingImages] = useState([]);
+  const [loadingImages, setLoadingImages] = useState(true);
+
   // Helper function to extract the main line part (e.g., "Línea 6.3" from "Línea 6.3 (soporte áridos)")
   const extractMainLine = (line) => {
     const match = line.match(/Línea \d+(\.\d+)?/);
@@ -32,18 +37,74 @@ const Paso9 = () => {
   };
 
   // Fetch images from Firestore
-  const fetchImages = async () => {
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const images = await getImg();
+        // Filter images to find matches with selectedLine
+        const matchingImages = images.filter(img => img.descripcion === selectedLine);
+        setMatchingImages(matchingImages);
+      } catch (error) {
+        console.error("Error fetching images:", error);
+      } finally {
+        setLoadingImages(false);
+      }
+    };
+
+    fetchImages();
+  }, [selectedLine]);
+
+  // Save data to Firestore
+  const saveToFirestore = async (nombreSeleccion) => {
+    const dataToSave = {
+      solidosSuspension: localStorage.getItem("solidosSuspension"),
+      dbo5: localStorage.getItem("dbo5"),
+      dqo: localStorage.getItem("dqo"),
+      nt: localStorage.getItem("nt"),
+      pt: localStorage.getItem("pt"),
+      ph: localStorage.getItem("ph"),
+      coliformesTotales: localStorage.getItem("coliformesTotales"),
+      temperaturaAgua: localStorage.getItem("temperaturaAgua"),
+      temperaturaAire: localStorage.getItem("temperaturaAire"),
+      aporteAguasResiduales: localStorage.getItem("aporteAguasResiduales"),
+      caudalMedio: localStorage.getItem("caudalMedio"),
+      conductividad: localStorage.getItem("conductividad"),
+      aceitesGrasas: localStorage.getItem("aceitesGrasas"),
+      poblacion_horizonte: localStorage.getItem("poblacion_horizonte"),
+      presupuesto: localStorage.getItem("presupuesto"),
+      area_terreno: localStorage.getItem("area_terreno"),
+      zonaEcologica: localStorage.getItem("zonaEcologica"),
+      SelectedLine: selectedLine,
+      nombreSeleccion: nombreSeleccion,
+    };
+
     try {
-      const images = await getImg();
-      // Filter images to find matches with selectedLine
-      const matchingImages = images.filter(img => img.descripcion === selectedLine);
-      setMatchingImages(matchingImages);
+      await addDoc(collection(db, "Reportes"), dataToSave);
+      swal("Éxito", "Datos guardados exitosamente", "success");
     } catch (error) {
-      console.error("Error fetching images:", error);
+      console.error("Error guardando los datos en Firestore: ", error);
+      swal("Error", "Error guardando los datos", "error");
     }
   };
 
- // fetchImages();
+  const handleSaveClick = () => {
+    swal({
+      title: "Ingrese el nombre de la selección",
+      content: {
+        element: "input",
+        attributes: {
+          placeholder: "Nombre de la selección",
+          type: "text",
+        },
+      },
+      buttons: ["Cancelar", "Guardar"],
+      dangerMode: true,
+    }).then((nombreSeleccion) => {
+      if (nombreSeleccion) {
+        saveToFirestore(nombreSeleccion);
+      }
+    });
+  };
 
   return (
     <div>
@@ -107,35 +168,43 @@ const Paso9 = () => {
           </tbody>
         </table>
       )}
-      {matchingImages.length > 0 ? (
-        <div className="mt-4">
-          <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2 text-center">
-            Diagrama {selectedLine}
-          </h3>
-          <div className="flex flex-wrap items-center justify-center">
-            {matchingImages.map((image, index) => (
-              <div key={index} className="mr-2 mb-2">
-                <img
-                  src={image.imagen}
-                  alt={image.descripcion}
-                  className="max-w-1300 max-h-48 mx-auto"
-                  onLoad={() => console.log('Loaded')}
-                  onError={() => console.log('Error')}
-                />
-                <p className="text-sm text-gray-600 dark:text-gray-400 text-center mt-2">{image.descripcion}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      ) : (
+
+      {loadingImages ? (
         <div className="flex justify-center items-center h-screen">
           <SpinnerPdf />
         </div>
+      ) : (
+        matchingImages.length > 0 && (
+          <div className="mt-4">
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2 text-center">
+              Diagrama {selectedLine}
+            </h3>
+            <div className="flex flex-wrap items-center justify-center">
+              {matchingImages.map((image, index) => (
+                <div key={index} className="mr-2 mb-2">
+                  <img
+                    src={image.imagen}
+                    alt={image.descripcion}
+                    className="max-w-1300 max-h-48 mx-auto"
+                    onLoad={() => console.log('Loaded')}
+                    onError={() => console.log('Error')}
+                  />
+                  <p className="text-sm text-gray-600 dark:text-gray-400 text-center mt-2">{image.descripcion}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       )}
 
+      <button
+        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+        onClick={handleSaveClick}
+      >
+        Guardar Selección Final
+      </button>
     </div>
   );
 };
 
 export default Paso9;
-
