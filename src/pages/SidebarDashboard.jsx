@@ -107,7 +107,7 @@ const SidebarDashboard = ({ isSidebarOpen, toggleSidebar }) => {
                 </a>
               </li>
             </Link>
-            <Link to={"/dashboard/calculadora"}>
+            <Link to={"/dashboard/calc"}>
               <li>
                 <a
                   href="#"

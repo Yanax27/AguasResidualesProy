@@ -19,3 +19,4 @@ export const getDataAltiplano = async () => getCollectionData("data_altiplano");
 export const getDataValles = async () => getCollectionData("data_valles");
 export const getDataLlanos = async () => getCollectionData("data_llanos");
 export const getTemperatura = async () => getCollectionData("temperatura");
+export const getImg = async () => getCollectionData("Img");

@@ -11,8 +11,8 @@ import NotFound from "./pages/NotFound";
 import FormularioPDF from "./components/FormularioPdf";
 import Biblioteca from "./pages/Biblioteca";
 import Seleccion from "./pages/Seleccion";
-
 import AddDatosGuia from "./components/AddDatosGuia";
+import Calculadora from "./pages/Calculadora";
 
 
 function App() {
@@ -68,7 +68,7 @@ function App() {
           <Route path="acercade" element={<AcercaDe />} />
           <Route path="datos" element={<AddDatosGuia />}/>
           <Route path="formpdf" element={<FormularioPDF />}/>
-          
+          <Route path="calc" element={<Calculadora />}/>
         </Route>
         <Route path="*" element={<NotFound />} />
         <Route path="/login" element={<Login />} />

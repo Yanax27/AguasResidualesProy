@@ -23,7 +23,7 @@ const Biblioteca = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center h-screen"> {/* Centra el contenido vertical y horizontalmente */}
+    <div className="flex justify-center items-center h-screen">
       {loading ? (
         <SpinnerPdf />
       ) : (
