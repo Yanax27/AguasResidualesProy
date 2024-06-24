@@ -95,39 +95,40 @@ function Paso6() {
             </div>
 
             <div className="max-w-3xl mx-auto py-8">
-            <div className="overflow-x-auto shadow-md sm:rounded-lg mb-2">
-                <table className="w-full table-auto border-collapse border border-gray-200 bg-white">
-                    <thead className="bg-blue-400 text-white">
-                        <tr>
-                            <th className="border border-gray-200 px-4 py-2">Descripción y Criterio de Selección</th>
-                            <th className="border border-gray-200 px-4 py-2">Peso</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {criteriosFiltrados.map((criterio, criterioIndex) => {
-                            let rows = [];
-                            rows.push(<FilaCriterio key={`criterio-${criterioIndex}`} criterio={criterio} />);
-                            if (criterio.subcriterios) {
-                                criterio.subcriterios.forEach((subcriterio, subIndex) => {
-                                    rows.push(
-                                        <FilaSubcriterio
-                                            key={`subcriterio-${criterioIndex}-${subIndex}`}
-                                            criterioIndex={criterioIndex}
-                                            subIndex={subIndex}
-                                            subcriterio={subcriterio}
-                                            peso={pesos[`${criterioIndex}-${subIndex}`] || ''}
-                                            handlePesoChange={handlePesoChange}
-                                        />
-                                    );
-                                });
-                            }
-                            return rows;
-                        })}
-                    </tbody>
-                </table>
+                <div className="overflow-x-auto shadow-md sm:rounded-lg mb-2">
+                    <table className="w-full table-auto border-collapse border border-gray-200 bg-white">
+                        <thead className="bg-blue-400 text-white">
+                            <tr>
+                                <th className="border border-gray-200 px-4 py-2">Descripción y Criterio de Selección</th>
+                                <th className="border border-gray-200 px-4 py-2">Peso</th>
+                            </tr>
+                        </thead>
+                        <tbody >
+                            {criteriosFiltrados.map((criterio, criterioIndex) => (
+                                <div key={criterioIndex} >
+                                    <tr>
+                                        <td className="border border-gray-200 px-4 py-2 bg-blue-400 text-white">{criterio.criterio}</td>
+                                        <td className="border border-gray-200 px-4 py-2 bg-blue-400 text-white"></td>
+                                    </tr>
+                                    {criterio.subcriterios && criterio.subcriterios.map((subcriterio, subIndex) => (
+                                        <tr key={subIndex}>
+                                            <td className="border border-gray-200 px-4 py-2">{subcriterio.nombre}</td>
+                                            <td className="border border-gray-200 px-4 py-2 text-center bg-yellow-400">
+                                                <input
+                                                    type="number"
+                                                    value={pesos[`${criterioIndex}-${subIndex}`] || ''}
+                                                    onChange={(e) => handlePesoChange(criterioIndex, subIndex, Number(e.target.value))}
+                                                    className="w-16 px-2 py-1 border border-gray-300 rounded text-center"
+                                                />
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </div>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
-
             <div className="flex justify-center mt-4">
                 <button
                     onClick={handleGuardar}
@@ -139,28 +140,5 @@ function Paso6() {
         </div>
     );
 }
-function FilaCriterio({ criterio }) {
-    return (
-        <tr>
-            <td className="border border-gray-200 px-4 py-2 bg-blue-400 text-white">{criterio.criterio}</td>
-            <td className="border border-gray-200 px-4 py-2 bg-blue-400 text-white"></td>
-        </tr>
-    );
-}
 
-function FilaSubcriterio({ criterioIndex, subIndex, subcriterio, peso, handlePesoChange }) {
-    return (
-        <tr>
-            <td className="border border-gray-200 px-4 py-2">{subcriterio.nombre}</td>
-            <td className="border border-gray-200 px-4 py-2 text-center bg-yellow-400">
-                <input
-                    type="number"
-                    value={peso}
-                    onChange={(e) => handlePesoChange(criterioIndex, subIndex, Number(e.target.value))}
-                    className="w-16 px-2 py-1 border border-gray-300 rounded text-center"
-                />
-            </td>
-        </tr>
-    );
-}
 export default Paso6;
