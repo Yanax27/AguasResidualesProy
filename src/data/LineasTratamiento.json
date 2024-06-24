@@ -1,0 +1,115 @@
+[
+    {
+      "id": 1,
+      "linea": "Línea 1",
+      "descripcion": "Pretratamiento + Tanques Imhoff + Filtros Anaerobios de Flujo Ascendente + Lagunas Facultativas",
+      "lineaAgua": "TI + FAFA + LAG FAC",
+      "lineaLodos": "LS",
+      "selecionada": false
+    },
+    {
+      "id": 2,
+      "linea": "Línea 2",
+      "descripcion": "Pretratamiento + Reactores Anaerobios de Flujo Ascendente + Lagunas Facultativas",
+      "lineaAgua": "RAFA + LAG FAC",
+      "lineaLodos": "LS",
+      "seleccionada": false
+    },
+    {
+      "id": 3,
+      "linea": "Línea 3",
+      "descripcion": "Pretratamiento + Lagunas Anaerobias + Lagunas Facultativas",
+      "lineaAgua": "LAG ANA + LAG FAC",
+      "lineaLodos": "LS",
+      "selecionada": false
+    },
+    {
+      "id": 4,
+      "linea": "Línea 4.1",
+      "descripcion": "Pretratamiento + Tanques Imhoff + Humedales Artificiales de Flujo Superficial Horizontal",
+      "lineaAgua": "TI + HUM (Horizontal)",
+      "lineaLodos": "LS",
+      "selecionada": false
+    },
+    {
+      "id": 5,
+      "linea": "Línea 4.2",
+      "descripcion": "Pretratamiento + Tanques Imhoff + Humedales Artificiales de Flujo Superficial Vertical",
+      "lineaAgua": "TI + HUM (Vertical)",
+      "lineaLodos": "LS",
+      "selecionada": false
+    },
+    {
+      "id": 6,
+      "linea": "Línea 5",
+      "descripcion": "Pretratamiento + Lombrifiltros",
+      "lineaAgua": "LOMB",
+      "lineaLodos": "-",
+      "selecionada": false
+    },
+    {
+      "id": 7,
+      "linea": "Línea 6.1",
+      "descripcion": "Pretratamiento + Tanques Imhoff + Filtros Percoladores + Sedimentadores Secundarios",
+      "lineaAgua": "TI + FP",
+      "lineaLodos": "LS",
+      "selecionada": false
+    },
+    {
+      "id": 8,
+      "linea": "Línea 6.2",
+      "descripcion": "Pretratamiento + Sedimentadores Primarios + Filtros Percoladores + Sedimentadores Secundarios",
+      "lineaAgua": "SED PRIM + FP",
+      "lineaLodos": "DIGESTIÓN A Tª AMBIENTE + LS",
+      "selecionada": false
+    },
+    {
+      "id": 9,
+      "linea": "Línea 6.3",
+      "descripcion": "Pretratamiento + Reactores Anaerobios de Flujo Ascendente + Filtros Percoladores + Sedimentadores Secundarios",
+      "lineaAgua": "RAFA + FP",
+      "lineaLodos": "LS",
+      "selecionada": false
+    },
+    {
+      "id": 10,
+      "linea": "Línea 7.1",
+      "descripcion": "Pretratamiento + Tanques Imhoff + Contactores Biológicos Rotativos + Sedimentadores Secundarios",
+      "lineaAgua": "TI + CBR",
+      "lineaLodos": "LS",
+      "selecionada": false
+    },
+    {
+      "id": 11,
+      "linea": "Línea 7.2",
+      "descripcion": "Pretratamiento + Sedimentadores Primarios + Contactores Biológicos Rotativos + Sedimentadores Secundarios",
+      "lineaAgua": "SED PRIM + CBR",
+      "lineaLodos": "DIGESTIÓN A Tª AMBIENTE + LS",
+      "selecionada": false
+    },
+    {
+      "id": 12,
+      "linea": "Línea 7.3",
+      "descripcion": "Pretratamiento + Reactores Anaerobios de Flujo Ascendente + Contactores Biológicos Rotativos + Sedimentadores Secundarios",
+      "lineaAgua": "RAFA + CBR",
+      "lineaLodos": "LS",
+      "selecionada": false
+    },
+    {
+      "id": 13,
+      "linea": "Línea 8.1",
+      "descripcion": "Pretratamiento + Aireaciones Extendidas + Sedimentadores Secundarios",
+      "lineaAgua": "AE",
+      "lineaLodos": "LS",
+      "selecionada": false
+    },
+    {
+      "id": 14,
+      "linea": "Línea 8.2",
+      "descripcion": "Pretratamiento + Aireaciones Extendidas + Sedimentadores Secundarios + Espesadores de Lodos por Gravedad",
+      "lineaAgua": "AE",
+      "lineaLodos": "ESP GRAV + LS",
+      "selecionada": false
+    }
+  ]
+  

@@ -1,0 +1,121 @@
+[
+    {
+      "id": 1,
+      "lineaTratamiento": "Línea 1",
+      "rangoInferior": 1000,
+      "rangoSuperior": 2000,
+      "zonaEcologica": ["V", "LL"],
+      "lineaAgua": "TI + FAFA + LAG FAC",
+      "lineaLodos": "LS"
+      
+    },
+    {
+      "id": 2,
+      "lineaTratamiento": "Línea 2",
+      "rangoInferior": 1000,
+      "rangoSuperior": 50000,
+      "zonaEcologica": ["V", "LL"],
+      "lineaAgua": "RAFA + LAG FAC",
+      "lineaLodos": "LS"
+    },
+    {
+      "id": 3,
+      "lineaTratamiento": "Línea 3",
+      "rangoInferior": 1000,
+      "rangoSuperior": 50000,
+      "zonaEcologica": ["A", "V", "LL"],
+      "lineaAgua": "LAG ANA + LAG FAC",
+      "lineaLodos": "LS"
+    },
+    {
+      "id": 4,
+      "lineaTratamiento": "Línea 4",
+      "rangoInferior": 1000,
+      "rangoSuperior": 5000,
+      "zonaEcologica": ["A", "V", "LL"],
+      "lineaAgua": "TI + HUM (Horiz. o Vert.)",
+      "lineaLodos": "LS"
+    },
+    {
+      "id": 5,
+      "lineaTratamiento": "Línea 5",
+      "rangoInferior": 1000,
+      "rangoSuperior": 5000,
+      "zonaEcologica": ["A", "V", "LL"],
+      "lineaAgua": "LOMB",
+      "lineaLodos": "-"
+    },
+    {
+      "id": 6,
+      "lineaTratamiento": "Línea 6.1",
+      "rangoInferior": 1000,
+      "rangoSuperior": 20000,
+      "zonaEcologica": ["A"],
+      "lineaAgua": "TI + FP",
+      "lineaLodos": "LS"
+    },
+    {
+      "id": 7,
+      "lineaTratamiento": "Línea 6.2",
+      "rangoInferior": 20001,
+      "rangoSuperior": 50000,
+      "zonaEcologica": ["A"],
+      "lineaAgua": "SED PRIM + FP",
+      "lineaLodos": "DIGESTIÓN A Tª AMBIENTE + LS"
+    },
+    {
+      "id": 8,
+      "lineaTratamiento": "Línea 6.3",
+      "rangoInferior": 1000,
+      "rangoSuperior": 50000,
+      "zonaEcologica": ["V", "LL"],
+      "lineaAgua": "RAFA + FP",
+      "lineaLodos": "LS"
+    },
+    {
+      "id": 9,
+      "lineaTratamiento": "Línea 7.1",
+      "rangoInferior": 1000,
+      "rangoSuperior": 20000,
+      "zonaEcologica": ["A"],
+      "lineaAgua": "TI + CBR",
+      "lineaLodos": "LS"
+    },
+    {
+      "id": 10,
+      "lineaTratamiento": "Línea 7.2",
+      "rangoInferior": 20001,
+      "rangoSuperior": 50000,
+      "zonaEcologica": ["A"],
+      "lineaAgua": "SED PRIM + CBR",
+      "lineaLodos": "DIGESTIÓN A Tª AMBIENTE + LS"
+    },
+    {
+      "id": 11,
+      "lineaTratamiento": "Línea 7.3",
+      "rangoInferior": 1000,
+      "rangoSuperior": 50000,
+      "zonaEcologica": ["V","LL"],
+      "lineaAgua": "RAFA + CBR",
+      "lineaLodos": "LS"
+    },
+    {
+      "id": 12,
+      "lineaTratamiento": "Línea 8.1",
+      "rangoInferior": 1000,
+      "rangoSuperior": 20000,
+      "zonaEcologica": ["A", "V", "LL"],
+      "lineaAgua": "AE",
+      "lineaLodos": "LS"
+    },
+    {
+      "id": 13,
+      "lineaTratamiento": "Línea 8.2",
+      "rangoInferior": 20001,
+      "rangoSuperior": 50000,
+      "zonaEcologica": ["A", "V", "LL"],
+      "lineaAgua": "AE",
+      "lineaLodos": "ESP GRAV + LS"
+    }
+  ]
+  

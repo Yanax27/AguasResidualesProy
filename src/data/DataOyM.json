@@ -1,0 +1,24 @@
+[
+
+  {
+    "id": 1,
+    "complejidad": "Alto",
+    "lineas_de_tratamiento": ["Línea 8.1", "Línea 8.2"]
+  },
+  {
+    "id": 2,
+    "complejidad": "Media",
+    "lineas_de_tratamiento": ["Línea 7.1", "Línea 7.2", "Línea 6.1", "Línea 6.2", "Línea 7.3", "Línea 6.3"]
+  },
+  {
+    "id": 3,
+    "complejidad": "Baja",
+    "lineas_de_tratamiento": ["Línea 4.2","Línea 5"]
+  },
+  {
+    "id": 4,
+    "complejidad": "Muy Baja",
+    "lineas_de_tratamiento": ["Línea 1", "Línea 2", "Línea 4.1", "Línea 3"]
+  }
+
+]

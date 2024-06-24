@@ -1,0 +1,157 @@
+[
+    {
+      "id": 1,
+      "linea_tratamiento": "Línea 1",
+      "lineaAgua": "TI + FAFA + LAG FAC",
+      "SS": "70 - 80",
+      "DBO5": "75 - 85",
+      "DQO": "70 - 80",
+      "NT": "10 - 25",
+      "PT": "10 - 15",
+      "Coliformes_fecales": "2 - 3"
+    },
+    {
+      "id": 2,
+      "linea_tratamiento": "Línea 2",
+      "lineaAgua": "RAFA + LAG FAC",
+      "SS": "70 - 80",
+      "DBO5": "80 - 90",
+      "DQO": "75 - 85",
+      "NT": "10 - 25",
+      "PT": "10 - 15",
+      "Coliformes_fecales": "2 - 3"
+    },
+    {
+      "id": 3,
+      "linea_tratamiento": "Línea 3",
+      "lineaAgua": "LAG ANA + LAG FAC",
+      "SS": "70 - 80",
+      "DBO5": "75 - 85",
+      "DQO": "70 - 80",
+      "NT": "20 - 30",
+      "PT": "10 - 15",
+      "Coliformes_fecales": "2 - 3"
+    },
+    {
+      "id": 4,
+      "linea_tratamiento": "Línea 4.1",
+      "lineaAgua": "TI + HUM (Horiz. o Vert.)",
+      "SS": "90 - 95",
+      "DBO5": "90 - 95",
+      "DQO": "80 - 90",
+      "NT": "20 - 35",
+      "PT": "20 - 35",
+      "Coliformes_fecales": "1 - 2"
+    },
+    {
+      "id": 5,
+      "linea_tratamiento": "Línea 4.2",
+      "lineaAgua": "TI + HUM (Horizontal)",
+      "SS": "90 - 95",
+      "DBO5": "90 - 95",
+      "DQO": "80 - 90",
+      "NT": "20 - 35",
+      "PT": "20 - 35",
+      "Coliformes_fecales": "1 - 2"
+    },
+    {
+      "id": 6,
+      "linea_tratamiento": "Línea 5",
+      "lineaAgua": "LOMB",
+      "SS": "85 - 95",
+      "DBO5": "85 - 95",
+      "DQO": "80 - 90",
+      "NT": "15 - 20",
+      "PT": "10 - 30",
+      "Coliformes_fecales": "1 - 2"
+    },
+    {
+      "id": 7,
+      "linea_tratamiento": "Línea 6.1",
+      "lineaAgua": "TI + FP",
+      "SS": "85 - 95",
+      "DBO5": "85 - 90",
+      "DQO": "80 - 85",
+      "NT": "20 - 35",
+      "PT": "20 - 30",
+      "Coliformes_fecales": "1"
+    },
+    {
+      "id": 8,
+      "linea_tratamiento": "Línea 6.2",
+      "lineaAgua": "SED PRIM + FP",
+      "SS": "85 - 95",
+      "DBO5": "85 - 90",
+      "DQO": "80 - 85",
+      "NT": "20 - 35",
+      "PT": "20 - 30",
+      "Coliformes_fecales": "1"
+    },
+    {
+      "id": 9,
+      "linea_tratamiento": "Línea 6.3",
+      "lineaAgua": "RAFA + FP",
+      "SS": "85 - 95",
+      "DBO5": "85 - 90",
+      "DQO": "80 - 85",
+      "NT": "20 - 35",
+      "PT": "10 - 20",
+      "Coliformes_fecales": "1"
+    },
+    {
+      "id": 10,
+      "linea_tratamiento": "Línea 7.1",
+      "lineaAgua": "TI + CBR",
+      "SS": "85 - 95",
+      "DBO5": "85 - 90",
+      "DQO": "80 - 85",
+      "NT": "20 - 35",
+      "PT": "20 - 30",
+      "Coliformes_fecales": "1"
+    },
+    {
+      "id": 11,
+      "linea_tratamiento": "Línea 7.2",
+      "lineaAgua": "SED PRIM + CBR",
+      "SS": "85 - 95",
+      "DBO5": "85 - 90",
+      "DQO": "80 - 85",
+      "NT": "20 - 35",
+      "PT": "20 - 30",
+      "Coliformes_fecales": "1"
+    },
+    {
+      "id": 12,
+      "linea_tratamiento": "Línea 7.3",
+      "lineaAgua": "RAFA + CBR",
+      "SS": "85 - 95",
+      "DBO5": "85 - 90",
+      "DQO": "80 - 85",
+      "NT": "20 - 35",
+      "PT": "10 - 20",
+      "Coliformes_fecales": "1"
+    },
+    {
+      "id": 13,
+      "linea_tratamiento": "Línea 8.1",
+      "lineaAgua": "AE",
+      "SS": "85 - 95",
+      "DBO5": "85 - 95",
+      "DQO": "80 - 90",
+      "NT": "80 - 85",
+      "PT": "20 - 30",
+      "Coliformes_fecales": "1"
+    },
+    {
+      "id": 14,
+      "linea_tratamiento": "Línea 8.2",
+      "lineaAgua": "AE",
+      "SS": "85 - 95",
+      "DBO5": "85 - 95",
+      "DQO": "80 - 90",
+      "NT": "80 - 85",
+      "PT": "20 - 30",
+      "Coliformes_fecales": "1"
+    }
+  ]
+  

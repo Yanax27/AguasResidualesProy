@@ -1,0 +1,14 @@
+/*.fondo-img{
+    background-image: url('../assets/fondo1.png');
+    background-color: #181515; /* Used if the image is unavailable 
+    background-position: center; /* Center the image 
+    background-repeat: no-repeat; /* Do not repeat the image 
+    background-size: cover; /* Resize the background image to cover the entire container 
+}*/
+.fondo-nav{
+    background-image: url('../assets/navbar_uajms.PNG');
+    background-color: #181515; /* Used if the image is unavailable */ 
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}

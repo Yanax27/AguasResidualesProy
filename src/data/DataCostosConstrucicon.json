@@ -1,0 +1,1393 @@
+[
+  {
+    "id": 1,
+    "linea_tratamiento": "Línea 1",
+    "zona_ecologica": "Valles",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 1287,
+        "linea_lodos": 363,
+        "desinfeccion": 368,
+        "costo_total_construccion": 2018,
+        "costo_total_OM": 73.00
+      },
+      "2000_habitantes": {
+        "linea_agua": 1105,
+        "linea_lodos": 375,
+        "desinfeccion": 282,
+        "costo_total_construccion": 1762,
+        "costo_total_OM": 39.83
+      }
+    }
+  },
+  {
+    "id": 2,
+    "linea_tratamiento": "Línea 1",
+    "zona_ecologica": "Llanos",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 1159,
+        "linea_lodos": 363,
+        "desinfeccion": 319,
+        "costo_total_construccion": 1841,
+        "costo_total_OM": 72.48
+      },
+      "2000_habitantes": {
+        "linea_agua": 1000,
+        "linea_lodos": 375,
+        "desinfeccion": 241,
+        "costo_total_construccion": 1616,
+        "costo_total_OM": 39.51
+      }
+    }
+  },
+  {
+    "id": 3,
+    "linea_tratamiento": "Línea 2",
+    "zona_ecologica": "Valles",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 1058,
+        "linea_lodos": 190,
+        "desinfeccion": 368,
+        "costo_total_construccion": 1616,
+        "costo_total_OM": 87.71
+      },
+      "2000_habitantes": {
+        "linea_agua": 844,
+        "linea_lodos": 177,
+        "desinfeccion": 282,
+        "costo_total_construccion": 1303,
+        "costo_total_OM": 45.59
+      },
+      "5000_habitantes": {
+        "linea_agua": 672,
+        "linea_lodos": 157,
+        "desinfeccion": 214,
+        "costo_total_construccion": 1043,
+        "costo_total_OM": 23.73
+      },
+      "10000_habitantes": {
+        "linea_agua": 591,
+        "linea_lodos": 152,
+        "desinfeccion": 188,
+        "costo_total_construccion": 931,
+        "costo_total_OM": 19.49
+      },
+      "25000_habitantes": {
+        "linea_agua": 587,
+        "linea_lodos": 191,
+        "desinfeccion": 180,
+        "costo_total_construccion": 958,
+        "costo_total_OM": 15.06
+      },
+      "50000_habitantes": {
+        "linea_agua": 644,
+        "linea_lodos": 213,
+        "desinfeccion": 218,
+        "costo_total_construccion": 1075,
+        "costo_total_OM": 11.57
+      }
+    }
+  },
+  {
+    "id": 4,
+    "linea_tratamiento": "Línea 2",
+    "zona_ecologica": "Llanos",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 878,
+        "linea_lodos": 190,
+        "desinfeccion": 319,
+        "costo_total_construccion": 1387,
+        "costo_total_OM": 88.12
+      },
+      "2000_habitantes": {
+        "linea_agua": 698,
+        "linea_lodos": 177,
+        "desinfeccion": 241,
+        "costo_total_construccion": 1116,
+        "costo_total_OM": 45.79
+      },
+      "5000_habitantes": {
+        "linea_agua": 540,
+        "linea_lodos": 157,
+        "desinfeccion": 163,
+        "costo_total_construccion": 860,
+        "costo_total_OM": 23.72
+      },
+      "10000_habitantes": {
+        "linea_agua": 481,
+        "linea_lodos": 152,
+        "desinfeccion": 145,
+        "costo_total_construccion": 778,
+        "costo_total_OM": 19.47
+      },
+      "25000_habitantes": {
+        "linea_agua": 486,
+        "linea_lodos": 191,
+        "desinfeccion": 130,
+        "costo_total_construccion": 807,
+        "costo_total_OM": 15.12
+      },
+      "50000_habitantes": {
+        "linea_agua": 514,
+        "linea_lodos": 213,
+        "desinfeccion": 143,
+        "costo_total_construccion": 870,
+        "costo_total_OM": 11.36
+      }
+    }
+  },
+  {
+    "id": 5,
+    "linea_tratamiento": "Línea 3",
+    "zona_ecologica": "Altiplano",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 832,
+        "linea_lodos": 221,
+        "desinfeccion": 351,
+        "costo_total_construccion": 1404,
+        "costo_total_OM": 72.95
+      },
+      "2000_habitantes": {
+        "linea_agua": 766,
+        "linea_lodos": 219,
+        "desinfeccion": 286,
+        "costo_total_construccion": 1271,
+        "costo_total_OM": 38.51
+      },
+      "5000_habitantes": {
+        "linea_agua": 704,
+        "linea_lodos": 210,
+        "desinfeccion": 218,
+        "costo_total_construccion": 1132,
+        "costo_total_OM": 19.64
+      },
+      "10000_habitantes": {
+        "linea_agua": 705,
+        "linea_lodos": 236,
+        "desinfeccion": 202,
+        "costo_total_construccion": 1143,
+        "costo_total_OM": 12.01
+      },
+      "25000_habitantes": {
+        "linea_agua": 713,
+        "linea_lodos": 241,
+        "desinfeccion": 171,
+        "costo_total_construccion": 1125,
+        "costo_total_OM": 12.06
+      },
+      "50000_habitantes": {
+        "linea_agua": 748,
+        "linea_lodos": 269,
+        "desinfeccion": 172,
+        "costo_total_construccion": 1189,
+        "costo_total_OM": 10.56
+      }
+    }
+  },
+  {
+    "id": 6,
+    "linea_tratamiento": "Línea 3",
+    "zona_ecologica": "Valles",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 705,
+        "linea_lodos": 280,
+        "desinfeccion": 252,
+        "costo_total_construccion": 1237,
+        "costo_total_OM": 72.43
+      },
+      "2000_habitantes": {
+        "linea_agua": 600,
+        "linea_lodos": 271,
+        "desinfeccion": 183,
+        "costo_total_construccion": 1054,
+        "costo_total_OM": 37.80
+      },
+      "5000_habitantes": {
+        "linea_agua": 477,
+        "linea_lodos": 259,
+        "desinfeccion": 130,
+        "costo_total_construccion": 866,
+        "costo_total_OM": 18.60
+      },
+      "10000_habitantes": {
+        "linea_agua": 439,
+        "linea_lodos": 260,
+        "desinfeccion": 107,
+        "costo_total_construccion": 806,
+        "costo_total_OM": 10.74
+      },
+      "25000_habitantes": {
+        "linea_agua": 463,
+        "linea_lodos": 266,
+        "desinfeccion": 96,
+        "costo_total_construccion": 825,
+        "costo_total_OM": 9.48
+      },
+      "50000_habitantes": {
+        "linea_agua": 466,
+        "linea_lodos": 296,
+        "desinfeccion": 118,
+        "costo_total_construccion": 880,
+        "costo_total_OM": 8.06
+      }
+    }
+  },
+  {
+    "id": 7,
+    "linea_tratamiento": "Línea 3",
+    "zona_ecologica": "Llanos",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 457,
+        "linea_lodos": 280,
+        "desinfeccion": 230,
+        "costo_total_construccion": 967,
+        "costo_total_OM": 71.19
+      },
+      "2000_habitantes": {
+        "linea_agua": 353,
+        "linea_lodos": 271,
+        "desinfeccion": 167,
+        "costo_total_construccion": 791,
+        "costo_total_OM": 36.56
+      },
+      "5000_habitantes": {
+        "linea_agua": 254,
+        "linea_lodos": 259,
+        "desinfeccion": 107,
+        "costo_total_construccion": 620,
+        "costo_total_OM": 17.48
+      },
+      "10000_habitantes": {
+        "linea_agua": 218,
+        "linea_lodos": 260,
+        "desinfeccion": 90,
+        "costo_total_construccion": 568,
+        "costo_total_OM": 9.63
+      },
+      "25000_habitantes": {
+        "linea_agua": 252,
+        "linea_lodos": 266,
+        "desinfeccion": 75,
+        "costo_total_construccion": 593,
+        "costo_total_OM": 9.85
+      },
+      "50000_habitantes": {
+        "linea_agua": 232,
+        "linea_lodos": 296,
+        "desinfeccion": 79,
+        "costo_total_construccion": 607,
+        "costo_total_OM": 8.07
+      }
+    }
+  },
+  {
+    "id": 8,
+    "linea_tratamiento": "Línea 4.1",
+    "zona_ecologica": "Altiplano",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 828,
+        "linea_lodos": 255,
+        "desinfeccion_sin_filtrado": 41,
+        "desinfeccion_con_filtrado": 66,
+        "costo_total_construccion": 1124,
+        "costo_total_OM": 74.68
+      },
+      "2000_habitantes": {
+        "linea_agua": 663,
+        "linea_lodos": 247,
+        "desinfeccion_sin_filtrado": 26,
+        "desinfeccion_con_filtrado": 48,
+        "costo_total_construccion": 936,
+        "costo_total_OM": 42.37
+      },
+      "5000_habitantes": {
+        "linea_agua": 535,
+        "linea_lodos": 237,
+        "desinfeccion_sin_filtrado": 17,
+        "desinfeccion_con_filtrado": 35,
+        "costo_total_construccion": 789,
+        "costo_total_OM": 25.24
+      }
+    }
+  },
+  {
+    "id": 9,
+    "linea_tratamiento": "Línea 4.1",
+    "zona_ecologica": "Valles",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 783,
+        "linea_lodos": 321,
+        "desinfeccion_sin_filtrado": 46,
+        "desinfeccion_con_filtrado": 77,
+        "costo_total_construccion": 1150,
+        "costo_total_OM": 77.65
+      },
+      "2000_habitantes": {
+        "linea_agua": 600,
+        "linea_lodos": 304,
+        "desinfeccion_sin_filtrado": 31,
+        "desinfeccion_con_filtrado": 58,
+        "costo_total_construccion": 935,
+        "costo_total_OM": 45.26
+      },
+      "5000_habitantes": {
+        "linea_agua": 458,
+        "linea_lodos": 294,
+        "desinfeccion_sin_filtrado": 19,
+        "desinfeccion_con_filtrado": 43,
+        "costo_total_construccion": 771,
+        "costo_total_OM": 28.01
+      }
+    }
+  },
+  {
+    "id": 10,
+    "linea_tratamiento": "Línea 4.1",
+    "zona_ecologica": "Llanos",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 670,
+        "linea_lodos": 321,
+        "desinfeccion_sin_filtrado": 47,
+        "desinfeccion_con_filtrado": 76,
+        "costo_total_construccion": 1038,
+        "costo_total_OM": 77.67
+      },
+      "2000_habitantes": {
+        "linea_agua": 504,
+        "linea_lodos": 304,
+        "desinfeccion_sin_filtrado": 32,
+        "desinfeccion_con_filtrado": 59,
+        "costo_total_construccion": 840,
+        "costo_total_OM": 45.95
+      },
+      "5000_habitantes": {
+        "linea_agua": 371,
+        "linea_lodos": 294,
+        "desinfeccion_sin_filtrado": 20,
+        "desinfeccion_con_filtrado": 45,
+        "costo_total_construccion": 685,
+        "costo_total_OM": 28.74
+      }
+    }
+  },
+  {
+    "id": 11,
+    "linea_tratamiento": "Línea 4.2",
+    "zona_ecologica": "Altiplano",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 722,
+        "linea_lodos": 255,
+        "desinfeccion_sin_filtrado": 41,
+        "desinfeccion_con_filtrado": 66,
+        "costo_total_construccion": 1018,
+        "costo_total_OM": 74.14
+      },
+      "2000_habitantes": {
+        "linea_agua": 560,
+        "linea_lodos": 247,
+        "desinfeccion_sin_filtrado": 26,
+        "desinfeccion_con_filtrado": 48,
+        "costo_total_construccion": 833,
+        "costo_total_OM": 41.86
+      },
+      "5000_habitantes": {
+        "linea_agua": 415,
+        "linea_lodos": 237,
+        "desinfeccion_sin_filtrado": 17,
+        "desinfeccion_con_filtrado": 35,
+        "costo_total_construccion": 669,
+        "costo_total_OM": 24.64
+      }
+    }
+  },
+  {
+    "id": 12,
+    "linea_tratamiento": "Línea 4.2",
+    "zona_ecologica": "Valles",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 684,
+        "linea_lodos": 321,
+        "desinfeccion_sin_filtrado": 46,
+        "desinfeccion_con_filtrado": 77,
+        "costo_total_construccion": 1051,
+        "costo_total_OM": 77.16
+      },
+      "2000_habitantes": {
+        "linea_agua": 486,
+        "linea_lodos": 304,
+        "desinfeccion_sin_filtrado": 31,
+        "desinfeccion_con_filtrado": 58,
+        "costo_total_construccion": 821,
+        "costo_total_OM": 44.69
+      },
+      "5000_habitantes": {
+        "linea_agua": 350,
+        "linea_lodos": 294,
+        "desinfeccion_sin_filtrado": 19,
+        "desinfeccion_con_filtrado": 43,
+        "costo_total_construccion": 663,
+        "costo_total_OM": 27.47
+      }
+    }
+  },
+  {
+    "id": 13,
+    "linea_tratamiento": "Línea 4.2",
+    "zona_ecologica": "Llanos",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 605,
+        "linea_lodos": 321,
+        "desinfeccion_sin_filtrado": 47,
+        "desinfeccion_con_filtrado": 76,
+        "costo_total_construccion": 973,
+        "costo_total_OM": 77.35
+      },
+      "2000_habitantes": {
+        "linea_agua": 413,
+        "linea_lodos": 304,
+        "desinfeccion_sin_filtrado": 32,
+        "desinfeccion_con_filtrado": 59,
+        "costo_total_construccion": 749,
+        "costo_total_OM": 45.49
+      },
+      "5000_habitantes": {
+        "linea_agua": 273,
+        "linea_lodos": 294,
+        "desinfeccion_sin_filtrado": 20,
+        "desinfeccion_con_filtrado": 45,
+        "costo_total_construccion": 587,
+        "costo_total_OM": 28.25
+      }
+    }
+  },
+  {
+    "id": 14,
+    "linea_tratamiento": "Línea 5",
+    "zona_ecologica": "Altiplano",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 1537,
+        "linea_lodos": null,
+        "desinfeccion_sin_filtrado": 41,
+        "desinfeccion_con_filtrado": 66,
+        "costo_total_construccion": 1578,
+        "costo_total_OM": 93.13
+      },
+      "2000_habitantes": {
+        "linea_agua": 1336,
+        "linea_lodos": null,
+        "desinfeccion_sin_filtrado": 26,
+        "desinfeccion_con_filtrado": 48,
+        "costo_total_construccion": 1362,
+        "costo_total_OM": 58.15
+      },
+      "5000_habitantes": {
+        "linea_agua": 1167,
+        "linea_lodos": null,
+        "desinfeccion_sin_filtrado": 17,
+        "desinfeccion_con_filtrado": 35,
+        "costo_total_construccion": 1184,
+        "costo_total_OM": 39.17
+      }
+    }
+  },
+  {
+    "id": 15,
+    "linea_tratamiento": "Línea 5",
+    "zona_ecologica": "Valles",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 1891,
+        "linea_lodos": null,
+        "desinfeccion_sin_filtrado": 46,
+        "desinfeccion_con_filtrado": 77,
+        "costo_total_construccion": 1937,
+        "costo_total_OM": 98.41
+      },
+      "2000_habitantes": {
+        "linea_agua": 1607,
+        "linea_lodos": null,
+        "desinfeccion_sin_filtrado": 31,
+        "desinfeccion_con_filtrado": 58,
+        "costo_total_construccion": 1638,
+        "costo_total_OM": 63.03
+      },
+      "5000_habitantes": {
+        "linea_agua": 1378,
+        "linea_lodos": null,
+        "desinfeccion_sin_filtrado": 19,
+        "desinfeccion_con_filtrado": 43,
+        "costo_total_construccion": 1397,
+        "costo_total_OM": 43.75
+      }
+    }
+  },
+  {
+    "id": 16,
+    "linea_tratamiento": "Línea 5",
+    "zona_ecologica": "Llanos",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 1827,
+        "linea_lodos": null,
+        "desinfeccion_sin_filtrado": 47,
+        "desinfeccion_con_filtrado": 76,
+        "costo_total_construccion": 1874,
+        "costo_total_OM": 100.97
+      },
+      "2000_habitantes": {
+        "linea_agua": 1601,
+        "linea_lodos": null,
+        "desinfeccion_sin_filtrado": 32,
+        "desinfeccion_con_filtrado": 59,
+        "costo_total_construccion": 1633,
+        "costo_total_OM": 66.35
+      },
+      "5000_habitantes": {
+        "linea_agua": 1358,
+        "linea_lodos": null,
+        "desinfeccion_sin_filtrado": 20,
+        "desinfeccion_con_filtrado": 45,
+        "costo_total_construccion": 1378,
+        "costo_total_OM": 46.36
+      }
+    }
+  },
+  {
+    "id": 17,
+    "linea_tratamiento": "Líneas 6.1 y 6.2 (soporte plástico)",
+    "zona_ecologica": "Altiplano",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 1661,
+        "linea_lodos": 336,
+        "desinfeccion_sin_filtrado": 41,
+        "desinfeccion_con_filtrado": 66,
+        "costo_total_construccion": 2038,
+        "costo_total_OM": 108.02
+      },
+      "2000_habitantes": {
+        "linea_agua": 1313,
+        "linea_lodos": 365,
+        "desinfeccion_sin_filtrado": 26,
+        "desinfeccion_con_filtrado": 48,
+        "costo_total_construccion": 1704,
+        "costo_total_OM": 62.77
+      },
+      "5000_habitantes": {
+        "linea_agua": 928,
+        "linea_lodos": 366,
+        "desinfeccion_sin_filtrado": 17,
+        "desinfeccion_con_filtrado": 35,
+        "costo_total_construccion": 1311,
+        "costo_total_OM": 38.53
+      },
+      "10000_habitantes": {
+        "linea_agua": 823,
+        "linea_lodos": 408,
+        "desinfeccion_sin_filtrado": 13,
+        "desinfeccion_con_filtrado": 34,
+        "costo_total_construccion": 1244,
+        "costo_total_OM": 35.30
+      },
+      "25000_habitantes": {
+        "linea_agua": 589,
+        "linea_lodos": 227,
+        "desinfeccion_sin_filtrado": 12,
+        "desinfeccion_con_filtrado": 33,
+        "costo_total_construccion": 828,
+        "costo_total_OM": 32.19
+      },
+      "50000_habitantes": {
+        "linea_agua": 581,
+        "linea_lodos": 257,
+        "desinfeccion_sin_filtrado": 12,
+        "desinfeccion_con_filtrado": 39,
+        "costo_total_construccion": 850,
+        "costo_total_OM": 32.78
+      }
+    }
+  },
+  {
+    "id": 18,
+    "linea_tratamiento": "Líneas 6.1 y 6.2 (soporte áridos)",
+    "zona_ecologica": "Altiplano",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 1715,
+        "linea_lodos": 336,
+        "desinfeccion_sin_filtrado": 41,
+        "desinfeccion_con_filtrado": 66,
+        "costo_total_construccion": 2092,
+        "costo_total_OM": 109.48
+      },
+      "2000_habitantes": {
+        "linea_agua": 1374,
+        "linea_lodos": 365,
+        "desinfeccion_sin_filtrado": 26,
+        "desinfeccion_con_filtrado": 48,
+        "costo_total_construccion": 1765,
+        "costo_total_OM": 63.81
+      },
+      "5000_habitantes": {
+        "linea_agua": 979,
+        "linea_lodos": 366,
+        "desinfeccion_sin_filtrado": 17,
+        "desinfeccion_con_filtrado": 35,
+        "costo_total_construccion": 1362,
+        "costo_total_OM": 33.99
+      },
+      "10000_habitantes": {
+        "linea_agua": 877,
+        "linea_lodos": 408,
+        "desinfeccion_sin_filtrado": 13,
+        "desinfeccion_con_filtrado": 34,
+        "costo_total_construccion": 1298,
+        "costo_total_OM": 35.66
+      },
+      "25000_habitantes": {
+        "linea_agua": 638,
+        "linea_lodos": 257,
+        "desinfeccion_sin_filtrado": 12,
+        "desinfeccion_con_filtrado": 33,
+        "costo_total_construccion": 907,
+        "costo_total_OM": 31.10
+      },
+      "50000_habitantes": {
+        "linea_agua": 637,
+        "linea_lodos": 277,
+        "desinfeccion_sin_filtrado": 12,
+        "desinfeccion_con_filtrado": 39,
+        "costo_total_construccion": 926,
+        "costo_total_OM": 32.30
+      }
+    }
+  },
+  {
+    "id": 19,
+    "linea_tratamiento": "Línea 6.3",
+    "zona_ecologica": "Valles",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 1499,
+        "linea_lodos": 221,
+        "desinfeccion_sin_filtrado": 46,
+        "desinfeccion_con_filtrado": 77,
+        "costo_total_construccion": 1766,
+        "costo_total_OM": 107.98
+      },
+      "2000_habitantes": {
+        "linea_agua": 1105,
+        "linea_lodos": 208,
+        "desinfeccion_sin_filtrado": 31,
+        "desinfeccion_con_filtrado": 58,
+        "costo_total_construccion": 1344,
+        "costo_total_OM": 62.19
+      },
+      "5000_habitantes": {
+        "linea_agua": 797,
+        "linea_lodos": 187,
+        "desinfeccion_sin_filtrado": 19,
+        "desinfeccion_con_filtrado": 43,
+        "costo_total_construccion": 1003,
+        "costo_total_OM": 38.21
+      },
+      "10000_habitantes": {
+        "linea_agua": 652,
+        "linea_lodos": 188,
+        "desinfeccion_sin_filtrado": 16,
+        "desinfeccion_con_filtrado": 41,
+        "costo_total_construccion": 856,
+        "costo_total_OM": 34.07
+      },
+      "25000_habitantes": {
+        "linea_agua": 625,
+        "linea_lodos": 229,
+        "desinfeccion_sin_filtrado": 14,
+        "desinfeccion_con_filtrado": 40,
+        "costo_total_construccion": 868,
+        "costo_total_OM": 30.56
+      },
+      "50000_habitantes": {
+        "linea_agua": 641,
+        "linea_lodos": 252,
+        "desinfeccion_sin_filtrado": 15,
+        "desinfeccion_con_filtrado": 47,
+        "costo_total_construccion": 908,
+        "costo_total_OM": 30.71
+      }
+    }
+  },
+  {
+    "id": 20,
+    "linea_tratamiento": "Línea 6.3 (soperte plástico)",
+    "zona_ecologica": "Llanos",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 1347,
+        "linea_lodos": 221,
+        "desinfeccion_sin_filtrado": 47,
+        "desinfeccion_con_filtrado": 77,
+        "costo_total_construccion": 1615,
+        "costo_total_OM": 107.83
+      },
+      "2000_habitantes": {
+        "linea_agua": 995,
+        "linea_lodos": 208,
+        "desinfeccion_sin_filtrado": 32,
+        "desinfeccion_con_filtrado": 59,
+        "costo_total_construccion": 1235,
+        "costo_total_OM": 62.94
+      },
+      "5000_habitantes": {
+        "linea_agua": 695,
+        "linea_lodos": 187,
+        "desinfeccion_sin_filtrado": 20,
+        "desinfeccion_con_filtrado": 45,
+        "costo_total_construccion": 902,
+        "costo_total_OM": 39.01
+      },
+      "10000_habitantes": {
+        "linea_agua": 568,
+        "linea_lodos": 188,
+        "desinfeccion_sin_filtrado": 20,
+        "desinfeccion_con_filtrado": 43,
+        "costo_total_construccion": 776,
+        "costo_total_OM": 35.66
+      },
+      "25000_habitantes": {
+        "linea_agua": 540,
+        "linea_lodos": 229,
+        "desinfeccion_sin_filtrado": 16,
+        "desinfeccion_con_filtrado": 43,
+        "costo_total_construccion": 785,
+        "costo_total_OM": 32.41
+      },
+      "50000_habitantes": {
+        "linea_agua": 533,
+        "linea_lodos": 252,
+        "desinfeccion_sin_filtrado": 17,
+        "desinfeccion_con_filtrado": 47,
+        "costo_total_construccion": 802,
+        "costo_total_OM": 31.9
+      }
+    }
+  },
+  {
+    "id": 21,
+    "linea_tratamiento": "Línea 6.3 (soporte áridos)",
+    "zona_ecologica": "Valles",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 1578,
+        "linea_lodos": 221,
+        "desinfeccion_sin_filtrado": 46,
+        "desinfeccion_con_filtrado": 77,
+        "costo_total_construccion": 1845,
+        "costo_total_OM": 109.2
+      },
+      "2000_habitantes": {
+        "linea_agua": 1176,
+        "linea_lodos": 208,
+        "desinfeccion_sin_filtrado": 31,
+        "desinfeccion_con_filtrado": 58,
+        "costo_total_construccion": 1415,
+        "costo_total_OM": 63.1
+      },
+      "5000_habitantes": {
+        "linea_agua": 851,
+        "linea_lodos": 187,
+        "desinfeccion_sin_filtrado": 19,
+        "desinfeccion_con_filtrado": 43,
+        "costo_total_construccion": 1057,
+        "costo_total_OM": 38.71
+      },
+      "10000_habitantes": {
+        "linea_agua": 699,
+        "linea_lodos": 189,
+        "desinfeccion_sin_filtrado": 16,
+        "desinfeccion_con_filtrado": 41,
+        "costo_total_construccion": 960,
+        "costo_total_OM": 34.36
+      },
+      "25000_habitantes": {
+        "linea_agua": 663,
+        "linea_lodos": 229,
+        "desinfeccion_sin_filtrado": 14,
+        "desinfeccion_con_filtrado": 40,
+        "costo_total_construccion": 906,
+        "costo_total_OM": 30.78
+      },
+      "50000_habitantes": {
+        "linea_agua": 683,
+        "linea_lodos": 252,
+        "desinfeccion_sin_filtrado": 15,
+        "desinfeccion_con_filtrado": 47,
+        "costo_total_construccion": 950,
+        "costo_total_OM": 30.56
+      }
+    }
+  },
+  {
+    "id": 22,
+    "linea_tratamiento": "Línea 6.3 (soporte áridos)",
+    "zona_ecologica": "Llanos",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 1356,
+        "linea_lodos": 221,
+        "desinfeccion_sin_filtrado": 47,
+        "desinfeccion_con_filtrado": 77,
+        "costo_total_construccion": 1624,
+        "costo_total_OM": 100.94
+      },
+      "2000_habitantes": {
+        "linea_agua": 1005,
+        "linea_lodos": 208,
+        "desinfeccion_sin_filtrado": 32,
+        "desinfeccion_con_filtrado": 59,
+        "costo_total_construccion": 1245,
+        "costo_total_OM": 54.15
+      },
+      "5000_habitantes": {
+        "linea_agua": 702,
+        "linea_lodos": 187,
+        "desinfeccion_sin_filtrado": 20,
+        "desinfeccion_con_filtrado": 45,
+        "costo_total_construccion": 909,
+        "costo_total_OM": 39.2
+      },
+      "10000_habitantes": {
+        "linea_agua": 574,
+        "linea_lodos": 189,
+        "desinfeccion_sin_filtrado": 20,
+        "desinfeccion_con_filtrado": 43,
+        "costo_total_construccion": 783,
+        "costo_total_OM": 35.65
+      },
+      "25000_habitantes": {
+        "linea_agua": 544,
+        "linea_lodos": 229,
+        "desinfeccion_sin_filtrado": 16,
+        "desinfeccion_con_filtrado": 43,
+        "costo_total_construccion": 789,
+        "costo_total_OM": 32.54
+      },
+      "50000_habitantes": {
+        "linea_agua": 536,
+        "linea_lodos": 252,
+        "desinfeccion_sin_filtrado": 17,
+        "desinfeccion_con_filtrado": 47,
+        "costo_total_construccion": 805,
+        "costo_total_OM": 31.9
+      }
+    }
+  },
+  {
+    "id": 23,
+    "linea_tratamiento": "Líneas 7.1 y 7.2",
+    "zona_ecologica": "Altiplano",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 1578,
+        "linea_lodos": 336,
+        "desinfeccion_sin_filtrado": 41,
+        "desinfeccion_con_filtrado": 66,
+        "costo_total_construccion": 1955,
+        "costo_total_OM": 125.36
+      },
+      "2000_habitantes": {
+        "linea_agua": 1399,
+        "linea_lodos": 365,
+        "desinfeccion_sin_filtrado": 26,
+        "desinfeccion_con_filtrado": 48,
+        "costo_total_construccion": 1790,
+        "costo_total_OM": 81.35
+      },
+      "5000_habitantes": {
+        "linea_agua": 1129,
+        "linea_lodos": 366,
+        "desinfeccion_sin_filtrado": 17,
+        "desinfeccion_con_filtrado": 35,
+        "costo_total_construccion": 1512,
+        "costo_total_OM": 55.39
+      },
+      "10000_habitantes": {
+        "linea_agua": 1037,
+        "linea_lodos": 408,
+        "desinfeccion_sin_filtrado": 13,
+        "desinfeccion_con_filtrado": 34,
+        "costo_total_construccion": 1458,
+        "costo_total_OM": 42.90
+      },
+      "25000_habitantes": {
+        "linea_agua": 894,
+        "linea_lodos": 257,
+        "desinfeccion_sin_filtrado": 12,
+        "desinfeccion_con_filtrado": 33,
+        "costo_total_construccion": 1163,
+        "costo_total_OM": 43.79
+      },
+      "50000_habitantes": {
+        "linea_agua": 925,
+        "linea_lodos": 277,
+        "desinfeccion_sin_filtrado": 12,
+        "desinfeccion_con_filtrado": 39,
+        "costo_total_construccion": 1214,
+        "costo_total_OM": 38.77
+      }
+    }
+  },
+  {
+    "id": 24,
+    "linea_tratamiento": "Línea 7.3",
+    "zona_ecologica": "Valles",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 1461,
+        "linea_lodos": 221,
+        "desinfeccion_sin_filtrado": 46,
+        "desinfeccion_con_filtrado": 77,
+        "costo_total_construccion": 1728,
+        "costo_total_OM": 113.35
+      },
+      "2000_habitantes": {
+        "linea_agua": 1087,
+        "linea_lodos": 208,
+        "desinfeccion_sin_filtrado": 31,
+        "desinfeccion_con_filtrado": 58,
+        "costo_total_construccion": 1326,
+        "costo_total_OM": 71.38
+      },
+      "5000_habitantes": {
+        "linea_agua": 834,
+        "linea_lodos": 187,
+        "desinfeccion_sin_filtrado": 19,
+        "desinfeccion_con_filtrado": 43,
+        "costo_total_construccion": 1040,
+        "costo_total_OM": 47.03
+      },
+      "10000_habitantes": {
+        "linea_agua": 711,
+        "linea_lodos": 189,
+        "desinfeccion_sin_filtrado": 16,
+        "desinfeccion_con_filtrado": 41,
+        "costo_total_construccion": 916,
+        "costo_total_OM": 42.08
+      },
+      "25000_habitantes": {
+        "linea_agua": 720,
+        "linea_lodos": 229,
+        "desinfeccion_sin_filtrado": 14,
+        "desinfeccion_con_filtrado": 40,
+        "costo_total_construccion": 963,
+        "costo_total_OM": 38.13
+      },
+      "50000_habitantes": {
+        "linea_agua": 741,
+        "linea_lodos": 252,
+        "desinfeccion_sin_filtrado": 15,
+        "desinfeccion_con_filtrado": 47,
+        "costo_total_construccion": 1008,
+        "costo_total_OM": 38.77
+      }
+    }
+  },
+  {
+    "id": 25,
+    "linea_tratamiento": "Línea 7.3",
+    "zona_ecologica": "Llanos",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 1394,
+        "linea_lodos": 221,
+        "desinfeccion_sin_filtrado": 47,
+        "desinfeccion_con_filtrado": 77,
+        "costo_total_construccion": 1662,
+        "costo_total_OM": 113.66
+      },
+      "2000_habitantes": {
+        "linea_agua": 1035,
+        "linea_lodos": 208,
+        "desinfeccion_sin_filtrado": 32,
+        "desinfeccion_con_filtrado": 59,
+        "costo_total_construccion": 1275,
+        "costo_total_OM": 72.29
+      },
+      "5000_habitantes": {
+        "linea_agua": 778,
+        "linea_lodos": 187,
+        "desinfeccion_sin_filtrado": 20,
+        "desinfeccion_con_filtrado": 45,
+        "costo_total_construccion": 985,
+        "costo_total_OM": 48.07
+      },
+      "10000_habitantes": {
+        "linea_agua": 670,
+        "linea_lodos": 189,
+        "desinfeccion_sin_filtrado": 20,
+        "desinfeccion_con_filtrado": 43,
+        "costo_total_construccion": 879,
+        "costo_total_OM": 33.50
+      },
+      "25000_habitantes": {
+        "linea_agua": 672,
+        "linea_lodos": 229,
+        "desinfeccion_sin_filtrado": 16,
+        "desinfeccion_con_filtrado": 43,
+        "costo_total_construccion": 917,
+        "costo_total_OM": 23.36
+      },
+      "50000_habitantes": {
+        "linea_agua": 673,
+        "linea_lodos": 252,
+        "desinfeccion_sin_filtrado": 17,
+        "desinfeccion_con_filtrado": 47,
+        "costo_total_construccion": 940,
+        "costo_total_OM": 17.25
+      }
+    }
+  },
+  {
+    "id": 26,
+    "linea_tratamiento": "Línea 8.1",
+    "zona_ecologica": "Altiplano",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 2004,
+        "linea_lodos": 333,
+        "desinfeccion_sin_filtrado": 41,
+        "desinfeccion_con_filtrado": 66,
+        "costo_total_construccion": 2500,
+        "costo_total_OM": 157.13
+      },
+      "2000_habitantes": {
+        "linea_agua": 1478,
+        "linea_lodos": 361,
+        "desinfeccion_sin_filtrado": 26,
+        "desinfeccion_con_filtrado": 48,
+        "costo_total_construccion": 2009,
+        "costo_total_OM": 111.26
+      },
+      "5000_habitantes": {
+        "linea_agua": 1032,
+        "linea_lodos": 362,
+        "desinfeccion_sin_filtrado": 17,
+        "desinfeccion_con_filtrado": 35,
+        "costo_total_construccion": 1576,
+        "costo_total_OM": 100.21
+      },
+      "10000_habitantes": {
+        "linea_agua": 950,
+        "linea_lodos": 403,
+        "desinfeccion_sin_filtrado": 13,
+        "desinfeccion_con_filtrado": 34,
+        "costo_total_construccion": 1566,
+        "costo_total_OM": 89.67
+      },
+      "25000_habitantes": {
+        "linea_agua": 776,
+        "linea_lodos": 251,
+        "desinfeccion_sin_filtrado": 12,
+        "desinfeccion_con_filtrado": 33,
+        "costo_total_construccion": 1039,
+        "costo_total_OM": 83.38
+      },
+      "50000_habitantes": {
+        "linea_agua": 695,
+        "linea_lodos": 268,
+        "desinfeccion_sin_filtrado": 12,
+        "desinfeccion_con_filtrado": 39,
+        "costo_total_construccion": 975,
+        "costo_total_OM": 88.29
+      }
+    }
+  },
+  {
+    "id": 27,
+    "linea_tratamiento": "Línea 8.1",
+    "zona_ecologica": "Valles",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 2021,
+        "linea_lodos": 429,
+        "desinfeccion_sin_filtrado": 46,
+        "desinfeccion_con_filtrado": 77,
+        "costo_total_construccion": 2496,
+        "costo_total_OM": 149.67
+      },
+      "2000_habitantes": {
+        "linea_agua": 1437,
+        "linea_lodos": 450,
+        "desinfeccion_sin_filtrado": 31,
+        "desinfeccion_con_filtrado": 58,
+        "costo_total_construccion": 1918,
+        "costo_total_OM": 98.50
+      },
+      "5000_habitantes": {
+        "linea_agua": 951,
+        "linea_lodos": 430,
+        "desinfeccion_sin_filtrado": 19,
+        "desinfeccion_con_filtrado": 43,
+        "costo_total_construccion": 1400,
+        "costo_total_OM": 82.96
+      },
+      "10000_habitantes": {
+        "linea_agua": 825,
+        "linea_lodos": 451,
+        "desinfeccion_sin_filtrado": 16,
+        "desinfeccion_con_filtrado": 41,
+        "costo_total_construccion": 1292,
+        "costo_total_OM": 65.81
+      },
+      "25000_habitantes": {
+        "linea_agua": 656,
+        "linea_lodos": 275,
+        "desinfeccion_sin_filtrado": 14,
+        "desinfeccion_con_filtrado": 40,
+        "costo_total_construccion": 945,
+        "costo_total_OM": 56.40
+      },
+      "50000_habitantes": {
+        "linea_agua": 565,
+        "linea_lodos": 294,
+        "desinfeccion_sin_filtrado": 15,
+        "desinfeccion_con_filtrado": 47,
+        "costo_total_construccion": 874,
+        "costo_total_OM": 62.85
+      }
+    }
+  },
+  {
+    "id": 28,
+    "linea_tratamiento": "Línea 8.1",
+    "zona_ecologica": "Llanos",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 1843,
+        "linea_lodos": 429,
+        "desinfeccion_sin_filtrado": 47,
+        "desinfeccion_con_filtrado": 77,
+        "costo_total_construccion": 2319,
+        "costo_total_OM": 140.99
+      },
+      "2000_habitantes": {
+        "linea_agua": 1282,
+        "linea_lodos": 450,
+        "desinfeccion_sin_filtrado": 32,
+        "desinfeccion_con_filtrado": 59,
+        "costo_total_construccion": 1764,
+        "costo_total_OM": 88.62
+      },
+      "5000_habitantes": {
+        "linea_agua": 825,
+        "linea_lodos": 430,
+        "desinfeccion_sin_filtrado": 20,
+        "desinfeccion_con_filtrado": 45,
+        "costo_total_construccion": 1275,
+        "costo_total_OM": 72.81
+      },
+      "10000_habitantes": {
+        "linea_agua": 713,
+        "linea_lodos": 451,
+        "desinfeccion_sin_filtrado": 20,
+        "desinfeccion_con_filtrado": 43,
+        "costo_total_construccion": 1184,
+        "costo_total_OM": 55.60
+      },
+      "25000_habitantes": {
+        "linea_agua": 558,
+        "linea_lodos": 275,
+        "desinfeccion_sin_filtrado": 16,
+        "desinfeccion_con_filtrado": 43,
+        "costo_total_construccion": 849,
+        "costo_total_OM": 52.26
+      },
+      "50000_habitantes": {
+        "linea_agua": 465,
+        "linea_lodos": 294,
+        "desinfeccion_sin_filtrado": 17,
+        "desinfeccion_con_filtrado": 47,
+        "costo_total_construccion": 776,
+        "costo_total_OM": 51.00
+      }
+    }
+  },
+  {
+    "id": 29,
+    "linea_tratamiento": "Línea 8.1",
+    "zona_ecologica": "Altiplano",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 2004,
+        "linea_lodos": 333,
+        "desinfeccion_sin_filtrado": 41,
+        "desinfeccion_con_filtrado": 66,
+        "costo_total_construccion": 2500,
+        "costo_total_OM": 157.13
+      },
+      "2000_habitantes": {
+        "linea_agua": 1478,
+        "linea_lodos": 361,
+        "desinfeccion_sin_filtrado": 26,
+        "desinfeccion_con_filtrado": 48,
+        "costo_total_construccion": 2009,
+        "costo_total_OM": 111.26
+      },
+      "5000_habitantes": {
+        "linea_agua": 1032,
+        "linea_lodos": 362,
+        "desinfeccion_sin_filtrado": 17,
+        "desinfeccion_con_filtrado": 35,
+        "costo_total_construccion": 1576,
+        "costo_total_OM": 100.21
+      },
+      "10000_habitantes": {
+        "linea_agua": 950,
+        "linea_lodos": 403,
+        "desinfeccion_sin_filtrado": 13,
+        "desinfeccion_con_filtrado": 34,
+        "costo_total_construccion": 1566,
+        "costo_total_OM": 89.67
+      },
+      "25000_habitantes": {
+        "linea_agua": 776,
+        "linea_lodos": 251,
+        "desinfeccion_sin_filtrado": 12,
+        "desinfeccion_con_filtrado": 33,
+        "costo_total_construccion": 1039,
+        "costo_total_OM": 83.38
+      },
+      "50000_habitantes": {
+        "linea_agua": 695,
+        "linea_lodos": 268,
+        "desinfeccion_sin_filtrado": 12,
+        "desinfeccion_con_filtrado": 39,
+        "costo_total_construccion": 975,
+        "costo_total_OM": 88.29
+      }
+    }
+  },
+  {
+    "id": 30,
+    "linea_tratamiento": "Línea 8.2",
+    "zona_ecologica": "Valles",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 2021,
+        "linea_lodos": 429,
+        "desinfeccion_sin_filtrado": 46,
+        "desinfeccion_con_filtrado": 77,
+        "costo_total_construccion": 2496,
+        "costo_total_OM": 149.67
+      },
+      "2000_habitantes": {
+        "linea_agua": 1437,
+        "linea_lodos": 450,
+        "desinfeccion_sin_filtrado": 31,
+        "desinfeccion_con_filtrado": 58,
+        "costo_total_construccion": 1918,
+        "costo_total_OM": 98.50
+      },
+      "5000_habitantes": {
+        "linea_agua": 951,
+        "linea_lodos": 430,
+        "desinfeccion_sin_filtrado": 19,
+        "desinfeccion_con_filtrado": 43,
+        "costo_total_construccion": 1400,
+        "costo_total_OM": 82.96
+      },
+      "10000_habitantes": {
+        "linea_agua": 825,
+        "linea_lodos": 451,
+        "desinfeccion_sin_filtrado": 16,
+        "desinfeccion_con_filtrado": 41,
+        "costo_total_construccion": 1292,
+        "costo_total_OM": 65.81
+      },
+      "25000_habitantes": {
+        "linea_agua": 656,
+        "linea_lodos": 275,
+        "desinfeccion_sin_filtrado": 14,
+        "desinfeccion_con_filtrado": 40,
+        "costo_total_construccion": 945,
+        "costo_total_OM": 56.40
+      },
+      "50000_habitantes": {
+        "linea_agua": 565,
+        "linea_lodos": 294,
+        "desinfeccion_sin_filtrado": 15,
+        "desinfeccion_con_filtrado": 47,
+        "costo_total_construccion": 874,
+        "costo_total_OM": 62.85
+      }
+    }
+  },
+  {
+    "id": 31,
+    "linea_tratamiento": "Línea 8.1",
+    "zona_ecologica": "Llanos",
+    "partidas": {
+      "1000_habitantes": {
+        "linea_agua": 1843,
+        "linea_lodos": 429,
+        "desinfeccion_sin_filtrado": 47,
+        "desinfeccion_con_filtrado": 77,
+        "costo_total_construccion": 2319,
+        "costo_total_OM": 140.99
+      },
+      "2000_habitantes": {
+        "linea_agua": 1282,
+        "linea_lodos": 450,
+        "desinfeccion_sin_filtrado": 32,
+        "desinfeccion_con_filtrado": 59,
+        "costo_total_construccion": 1764,
+        "costo_total_OM": 88.62
+      },
+      "5000_habitantes": {
+        "linea_agua": 825,
+        "linea_lodos": 430,
+        "desinfeccion_sin_filtrado": 20,
+        "desinfeccion_con_filtrado": 45,
+        "costo_total_construccion": 1275,
+        "costo_total_OM": 72.81
+      },
+      "10000_habitantes": {
+        "linea_agua": 713,
+        "linea_lodos": 451,
+        "desinfeccion_sin_filtrado": 20,
+        "desinfeccion_con_filtrado": 43,
+        "costo_total_construccion": 1184,
+        "costo_total_OM": 55.60
+      },
+      "25000_habitantes": {
+        "linea_agua": 558,
+        "linea_lodos": 275,
+        "desinfeccion_sin_filtrado": 16,
+        "desinfeccion_con_filtrado": 43,
+        "costo_total_construccion": 849,
+        "costo_total_OM": 52.26
+      },
+      "50000_habitantes": {
+        "linea_agua": 465,
+        "linea_lodos": 294,
+        "desinfeccion_sin_filtrado": 17,
+        "desinfeccion_con_filtrado": 47,
+        "costo_total_construccion": 776,
+        "costo_total_OM": 51.00
+      }
+    }
+  }
+]

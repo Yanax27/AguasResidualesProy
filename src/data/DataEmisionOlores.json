@@ -1,0 +1,18 @@
+[
+    {
+      "id": 1,
+      "riesgo": "Alto",
+      "lineas_de_tratamiento": ["Línea 1", "Línea 2","Línea 3", "Línea 6.3", "Línea 7.3"]
+    },
+    {
+      "id": 2,
+      "riesgo": "Medio",
+      "lineas_de_tratamiento": ["Línea 4.1", "Línea 4.2", "Línea 5","Línea 6.1", "Línea 6.2","Línea 7.1", "Línea 7.2" ]
+    },
+    {
+      "id": 3,
+      "riesgo": "Bajo",
+      "lineas_de_tratamiento": ["Línea 8.1", "Línea 8.2"]
+    }
+  ]
+  

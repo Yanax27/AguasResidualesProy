@@ -1,0 +1,41 @@
+[
+  { "id": 1, "criterio": "A. Eficacia de remoción", "seleccion": false, "subcriterios": [
+      "A.1. Calidad exigida a los efluentes tratados",
+      "A.2. Tipo de contaminación de las aguas residuales a tratar",
+      "A.3. Tolerancia a las variaciones de caudal y carga"
+  ]},
+  { "id": 2, "criterio": "B. Terrenos disponibles", "seleccion": false, "subcriterios": [
+      "B.1. Superficie disponible",
+      "B.2. Características constructivas de los terrenos"
+  ]},
+  { "id": 3, "criterio": "C. Aceptación social", "seleccion": false, "subcriterios": [
+      "C.1. Aceptación por parte de la población",
+      "C.2. Aceptación por parte de la entidad explotadora"
+  ]},
+  { "id": 4, "criterio": "D. Características medioambientales", "seleccion": false, "subcriterios": [
+      "D.1. Temperatura",
+      "D.2. Pluviometría",
+      "D.3. Altitud"
+  ]},
+  { "id": 5, "criterio": "E. Impactos medioambientales", "seleccion": false, "subcriterios": [
+      "E.1. Producción de malos olores",
+      "E.2. Generación de gases de efecto invernadero",
+      "E.3. Generación de ruidos",
+      "E.4. Impacto visual"
+  ]},
+  { "id": 6, "criterio": "F. Generación de lodos", "seleccion": false, "subcriterios": [
+      "F.1. Cantidad de lodos generados",
+      "F.2. Estabilidad de los lodos generados"
+  ]},
+  { "id": 7, "criterio": "G. Operación y mantenimiento", "seleccion": false, "subcriterios": [
+      "G.1. Requerimientos de personal cualificado",
+      "G.2. Disponibilidad de repuestos y de servicio técnico"
+  ]},
+  { "id": 8, "criterio": "H. Costos de construcción y de operación y mantenimiento", "seleccion": false, "subcriterios": [
+      "H.1. Costos de construcción",
+      "H.2. Costos de operación y mantenimiento"
+  ]},
+  { "id": 9, "criterio": "Otro (1)", "seleccion": false, "input": "" },
+  { "id": 10, "criterio": "Otro (2)", "seleccion": false, "input": "" },
+  { "id": 11, "criterio": "Otro (3)", "seleccion": false, "input": "" }
+]
