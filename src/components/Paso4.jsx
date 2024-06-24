@@ -10,25 +10,45 @@ import Tabla4_6 from './Tabla4_6';
 
 // Paso4 component
 function Paso4() {
-   //const [selectedLines, setSelectedLines] = useState([]);
+    //const [selectedLines, setSelectedLines] = useState([]);
     //const [eficienciaRemocion, setEficienciaRemocion] = useState([]);
     const [area_terreno, setArea_terreno] = useState(() => localStorage.getItem('area_terreno') || '');
-  // const [checkedRows, setCheckedRows] = useState({});
+    // const [checkedRows, setCheckedRows] = useState({});
     const [selectedRowsTabla4_1, setSelectedRowsTabla4_1] = useState([]);
     const [selectedRowsTabla4_2, setSelectedRowsTabla4_2] = useState([]);
     const [selectedRowsTabla4_3, setSelectedRowsTabla4_3] = useState([]);
     const [selectedRowsTabla4_4, setSelectedRowsTabla4_4] = useState([]);
     const [selectedRowsTabla4_5, setSelectedRowsTabla4_5] = useState([]);
     const [selectedRowsTabla4_6, setSelectedRowsTabla4_6] = useState([]);
-    
+    //declaramos valores constantes para trabajar los rendimientos
+    const ss = 60.0;
+    const dbo5Constant = 80.0;
+    const dqoConstant = 250.0;
+
+    //cargamos los valores de guardadso en el paso2 de ss, dbo5 y dqo para calcular los redimientos
+    const [solidosSuspension, setSolidosSuspension] = useState(() => localStorage.getItem('solidosSuspension') || '');
+    const [dbo5, setDbo5] = useState(() => localStorage.getItem('dbo5') || '');
+    const [dqo, setDqo] = useState(() => localStorage.getItem('dqo') || '');
+
+    // Cálculos de porcentajes de reducción
+    const calcularPorcentajeReduccion = (valorInicial, valorConstante) => {
+        return ((valorInicial - valorConstante) / valorInicial) * 100;
+    };
+
+    const dbo5Porcentaje = dbo5 ? calcularPorcentajeReduccion(dbo5, dbo5Constant).toFixed(2) : 0;
+    const ssPorcentaje = solidosSuspension ? calcularPorcentajeReduccion(solidosSuspension, ss).toFixed(2) : 0;
+    const dqoPorcentaje = dqo ? calcularPorcentajeReduccion(dqo, dqoConstant).toFixed(2) : 0;
+
+
     useEffect(() => {
+
         // Cargar datos del localStorage al montar el componente
         const storedSelectedRows3 = JSON.parse(localStorage.getItem('selectedRowsTabla4_3')) || [];
-        
+
         const storedSelectedRows2 = JSON.parse(localStorage.getItem('selectedRowsTabla4_2')) || [];
         setSelectedRowsTabla4_3(storedSelectedRows3);
         setSelectedRowsTabla4_2(storedSelectedRows2);
-      }, []);
+    }, []);
 
     //guarda los datos de las tablas en el local storage
     const handleSaveSelectedRows = () => {
@@ -36,13 +56,13 @@ function Paso4() {
         localStorage.setItem('selectedRowsTabla4_1', JSON.stringify(selectedRowsTabla4_1));
         localStorage.setItem('selectedRowsTabla4_2', JSON.stringify(selectedRowsTabla4_2));
 
-         // Guardar en el localStorage al hacer clic en el botón de guardar
+        // Guardar en el localStorage al hacer clic en el botón de guardar
         localStorage.setItem('selectedRowsTabla4_3', JSON.stringify(selectedRowsTabla4_3));
         /*const selected3 = selectedRowsTabla4_3.filter(item => item.seleccionada);
         localStorage.setItem('selectedRowsTabla4_3', JSON.stringify(selected3));*/
         localStorage.setItem('selectedRowsTabla4_4', JSON.stringify(selectedRowsTabla4_4));
-       /* const selected4 = selectedRowsTabla4_4.filter(item => item.seleccionada);
-        localStorage.setItem('selectedRowsTabla4_4', JSON.stringify(selected4));*/
+        /* const selected4 = selectedRowsTabla4_4.filter(item => item.seleccionada);
+         localStorage.setItem('selectedRowsTabla4_4', JSON.stringify(selected4));*/
 
         //onst selected5 = selectedRowsTabla4_5.filter(item => item.seleccionada);
         localStorage.setItem('selectedRowsTabla4_5', JSON.stringify(selectedRowsTabla4_5));
@@ -52,7 +72,7 @@ function Paso4() {
 
         alert('Filas seleccionadas guardadas exitosamente!');
     };
-    
+
     return (
         <div className="p-4 bg-gray-100 dark:bg-gray-200 rounded-lg shadow-lg mb-10">
             <p className="text-gray-600 dark:text-gray-300 text-justify mb-4">
@@ -83,7 +103,40 @@ function Paso4() {
             <p className="text-gray-600 dark:text-gray-300 text-justify mb-2">
                 A continuación tiene listadas las Líneas de Tratamiento elegidas en la 'Selección Previa'. Marque aquellas Líneas de Tratamiento que cumplen los criterios previamente detallados acerca de la eficacia de remoción:            </p>
 
-                <Tabla4_1 setSelectedRowsTabla4_1={setSelectedRowsTabla4_1} />
+            <Tabla4_1 setSelectedRowsTabla4_1={setSelectedRowsTabla4_1} />
+            <div className="overflow-x-auto shadow-md sm:rounded-lg mt-4 mb-4 max-w-md mx-auto">
+                <table className="w-full table-auto border-collapse border border-gray-200 bg-white">
+                    <thead className="bg-green-400 text-white">
+                        <tr>
+                            <th className="border border-gray-200 px-2 py-2">Parámetro</th>
+                            <th className="border border-gray-200 px-2 py-2">Valor Ingresado</th>
+                            <th className="border border-gray-200 px-2 py-2">Max. Admisible (Diario)</th>
+                            <th className="border border-gray-200 px-2 py-2">Rendimiento (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">Sólidos en suspensión</td>
+                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{solidosSuspension}</td>
+                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{ss}</td>
+                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{ssPorcentaje}%</td>
+                        </tr>
+                        <tr>
+                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">DBO5</td>
+                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo5}</td>
+                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo5Constant}</td>
+                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo5Porcentaje}%</td>
+                        </tr>
+                        <tr>
+                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">DQO</td>
+                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqo}</td>
+                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqoConstant}</td>
+                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqoPorcentaje}%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
             <span className="flex items-center mb-2">
                 <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6">4.2. Terrenos disponibles para la implantación de la PTAR</h3>
                 <span className="h-px flex-1 bg-black"></span>

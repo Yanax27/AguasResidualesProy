@@ -171,38 +171,39 @@ const Calculadora = () => {
               </tbody>
             </table>
           </div>
-          <div className="overflow-x-auto shadow-md sm:rounded-lg mt-4 mb-4">
+          <div className="overflow-x-auto shadow-md sm:rounded-lg mt-4 mb-4 max-w-md mx-auto">
             <table className="w-full table-auto border-collapse border border-gray-200 bg-white">
               <thead className="bg-red-400 text-white">
                 <tr>
-                  <th className="border border-gray-200 px-4 py-2">Parámetro</th>
-                  <th className="border border-gray-200 px-4 py-2">Valor Ingresado</th>
-                  <th className="border border-gray-200 px-4 py-2">Max. Admisible (Diario)</th>
-                  <th className="border border-gray-200 px-4 py-2">Rendimiento (%)</th>
+                  <th className="border border-gray-200 px-2 py-2">Parámetro</th>
+                  <th className="border border-gray-200 px-2 py-2">Valor Ingresado</th>
+                  <th className="border border-gray-200 px-2 py-2">Max. Admisible (Diario)</th>
+                  <th className="border border-gray-200 px-2 py-2">Rendimiento (%)</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td className="px-6 py-4 text-sm text-gray-500 border border-gray-200">Sólidos en suspensión</td>
-                  <td className="px-6 py-4 text-sm text-gray-500 border border-gray-200">{solidosSuspension}</td>
-                  <td className="px-6 py-4 text-sm text-gray-500 border border-gray-200">{ss}</td>
-                  <td className="px-6 py-4 text-sm text-gray-500 border border-gray-200">{ssPorcentaje}%</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">Sólidos en suspensión</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{solidosSuspension}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{ss}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{ssPorcentaje}%</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 text-sm text-gray-500 border border-gray-200">DBO5</td>
-                  <td className="px-6 py-4 text-sm text-gray-500 border border-gray-200">{dbo5}</td>
-                  <td className="px-6 py-4 text-sm text-gray-500 border border-gray-200">{dbo5Constant}</td>
-                  <td className="px-6 py-4 text-sm text-gray-500 border border-gray-200">{dbo5Porcentaje}%</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">DBO5</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo5}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo5Constant}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo5Porcentaje}%</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 text-sm text-gray-500 border border-gray-200">DQO</td>
-                  <td className="px-6 py-4 text-sm text-gray-500 border border-gray-200">{dqo}</td>
-                  <td className="px-6 py-4 text-sm text-gray-500 border border-gray-200">{dqoConstant}</td>
-                  <td className="px-6 py-4 text-sm text-gray-500 border border-gray-200">{dqoPorcentaje}%</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">DQO</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqo}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqoConstant}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqoPorcentaje}%</td>
                 </tr>
               </tbody>
             </table>
           </div>
+
           <div className="overflow-x-auto shadow-md sm:rounded-lg">
             <table className="w-full table-auto border-collapse border border-gray-200 bg-white">
               <thead className="bg-green-400 text-white">
@@ -233,7 +234,7 @@ const Calculadora = () => {
               </tbody>
             </table>
           </div>
-         
+
         </div>
       )}
     </div>
