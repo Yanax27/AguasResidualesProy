@@ -95,7 +95,7 @@ function Paso6() {
             </div>
 
             <div className="max-w-3xl mx-auto py-8">
-                <div className="overflow-x-auto shadow-md sm:rounded-lg mb-2">
+                <div className="overflow-x-auto shadow-md sm:rounded-lg mb-1">
                     <table className="w-full table-auto border-collapse border border-gray-200 bg-white">
                         <thead className="bg-blue-400 text-white">
                             <tr>
@@ -103,9 +103,9 @@ function Paso6() {
                                 <th className="border border-gray-200 px-4 py-2">Peso</th>
                             </tr>
                         </thead>
-                        <tbody >
+                        <tbody>
                             {criteriosFiltrados.map((criterio, criterioIndex) => (
-                                <div key={criterioIndex} >
+                                <React.Fragment key={criterioIndex}>
                                     <tr>
                                         <td className="border border-gray-200 px-4 py-2 bg-blue-400 text-white">{criterio.criterio}</td>
                                         <td className="border border-gray-200 px-4 py-2 bg-blue-400 text-white"></td>
@@ -123,7 +123,7 @@ function Paso6() {
                                             </td>
                                         </tr>
                                     ))}
-                                </div>
+                                </React.Fragment>
                             ))}
                         </tbody>
                     </table>
