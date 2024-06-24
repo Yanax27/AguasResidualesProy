@@ -57,7 +57,24 @@ export const DataContextProvider = ({ children }) => {
       'conductividad',
       'aceitesGrasas',
       'selectedLines',
-      'criteriosSeleccionados'
+      'criteriosSeleccionados',
+      'selectedRowsTabla4_3',
+      'selectedRowsTabla4_2',
+      'selectedRowsTabla4_1',
+      'selectedRowsTabla4_4',
+      'selectedRowsTabla4_5',
+      'selectedRowsTabla4_6',
+      'valoresCriterioH',
+      'selectedLine',
+      'criteriosPesos',
+      'valoresCriterioA',
+      'dataCostos',
+      'dataCostos1',
+      'dataCostos2',
+      'valoresCriterioE',
+      'valoresCriterioG',
+      'valoresCriterioH',
+    
     ];
   
     keysToRemove.forEach(key => localStorage.removeItem(key));

@@ -38,13 +38,13 @@ function Paso6() {
             const criteriosConPesos = criteriosFiltrados.map((criterio, criterioIndex) => ({
                 ...criterio,
                 subcriterios: criterio.subcriterios.map((subcriterio, subIndex) => ({
-                    ...subcriterio,
+                    nombre: subcriterio,  // Mantener el nombre original del subcriterio
                     peso: pesos[`${criterioIndex}-${subIndex}`] || null
                 }))
             }));
 
             // Guardar los criterios con pesos en el localStorage
-            localStorage.setItem('criteriosSeleccionados', JSON.stringify(criteriosConPesos));
+            localStorage.setItem('criterioS', JSON.stringify(criteriosConPesos));
             alert('Pesos guardados correctamente');
         } else {
             alert('Todos los pesos deben estar entre 1 y 4');
@@ -112,7 +112,7 @@ function Paso6() {
                                     </tr>
                                     {criterio.subcriterios && criterio.subcriterios.map((subcriterio, subIndex) => (
                                         <tr key={subIndex}>
-                                            <td className="border border-gray-200 px-4 py-2">{subcriterio.nombre}</td>
+                                            <td className="border border-gray-200 px-4 py-2">{subcriterio}</td>
                                             <td className="border border-gray-200 px-4 py-2 text-center bg-yellow-400">
                                                 <input
                                                     type="number"

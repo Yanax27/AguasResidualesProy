@@ -23,11 +23,13 @@ const Biblioteca = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="container mx-auto py-10">
       {loading ? (
-        <SpinnerPdf />
+        <div className="flex justify-center items-center h-screen">
+          <SpinnerPdf />
+        </div>
       ) : (
-        <div className="flex flex-wrap -mx-3 mb-5">
+        <div className="flex flex-wrap justify-center -mx-3">
           {datos.map((documento) => (
             <CardPdf key={documento.id} documento={documento} />
           ))}
@@ -38,3 +40,4 @@ const Biblioteca = () => {
 };
 
 export default Biblioteca;
+

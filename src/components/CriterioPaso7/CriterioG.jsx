@@ -9,7 +9,7 @@ function CriterioG({ onSaveCriterios }) {
 
     useEffect(() => {
         const storageCriteriosTabla4_2 = JSON.parse(localStorage.getItem('selectedRowsTabla4_2'));
-        const storageCriteriosSeleccionados = JSON.parse(localStorage.getItem('criteriosSeleccionados'));
+        const storageCriteriosSeleccionados = JSON.parse(localStorage.getItem('criterioS'));
 
         setLineasTabla4_2(storageCriteriosTabla4_2);
         setCriteriosSeleccionados(storageCriteriosSeleccionados);

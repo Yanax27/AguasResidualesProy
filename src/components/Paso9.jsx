@@ -74,7 +74,7 @@ const Paso9 = () => {
       presupuesto: localStorage.getItem("presupuesto"),
       area_terreno: localStorage.getItem("area_terreno"),
       zonaEcologica: localStorage.getItem("zonaEcologica"),
-      SelectedLine: selectedLine,
+      LineaSeleccionada: selectedLine,
       nombreSeleccion: nombreSeleccion,
     };
 

@@ -17,7 +17,7 @@ const CriterioH = ({onSaveCriterios}) => {
 
     useEffect(() => {
         const storageCriteriosTabla4_2 = JSON.parse(localStorage.getItem('selectedRowsTabla4_2'));
-        const storageCriteriosSeleccionados = JSON.parse(localStorage.getItem('criteriosSeleccionados'));
+        const storageCriteriosSeleccionados = JSON.parse(localStorage.getItem('criterioS'));
         const storageSelectedRows4_6 = JSON.parse(localStorage.getItem('selectedRowsTabla4_6'));
 
         setLineasTabla4_2(storageCriteriosTabla4_2);
