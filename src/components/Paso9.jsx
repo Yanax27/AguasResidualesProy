@@ -158,7 +158,7 @@ const Paso9 = () => {
             <tr className="text-lg font-semibold bg-blue-400 text-white">
               <th className="px-4 py-2">Costo de construcción estimado (Bs)</th>
               <th className="px-4 py-2">Costo anual estimado de O&M (Bs)</th>
-            </tr>
+            </tr>cd
           </thead>
           <tbody>
             <tr className="text-lg font-semibold">
