@@ -11,7 +11,6 @@ import NotFound from "./pages/NotFound";
 import FormularioPDF from "./components/FormularioPdf";
 import Biblioteca from "./pages/Biblioteca";
 import Seleccion from "./pages/Seleccion";
-import AddDatosGuia from "./components/AddDatosGuia";
 import Calculadora from "./pages/Calculadora";
 import Reportes from "./pages/Reportes";
 import DetalleReporte from "./components/DetalleReporte";
@@ -68,7 +67,6 @@ function App() {
           <Route path="public" element={<FormularioPDF />} />
           <Route path="biblioteca" element={<Biblioteca />} />
           <Route path="acercade" element={<AcercaDe />} />
-          <Route path="datos" element={<AddDatosGuia />}/>
           <Route path="formpdf" element={<FormularioPDF />}/>
           <Route path="calc" element={<Calculadora />}/>
           <Route path="reporte" element={<Reportes />}/>
