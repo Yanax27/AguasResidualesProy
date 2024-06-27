@@ -1,7 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-
-import { Toaster } from "react-hot-toast";
 import { DataContext } from "./context/Provider";
 import { Dashboard } from "./layouts/Dashboard";
 import AcercaDe from "./pages/AcercaDe";
@@ -67,7 +65,6 @@ function App() {
           <Route path="public" element={<FormularioPDF />} />
           <Route path="biblioteca" element={<Biblioteca />} />
           <Route path="acercade" element={<AcercaDe />} />
-          <Route path="formpdf" element={<FormularioPDF />}/>
           <Route path="calc" element={<Calculadora />}/>
           <Route path="reporte" element={<Reportes />}/>
           <Route path="detalle-reporte/:id" element={<DetalleReporte />}/>
