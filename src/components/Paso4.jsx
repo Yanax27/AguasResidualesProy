@@ -220,9 +220,12 @@ function Paso4() {
             <p className="text-blue-600 dark:text-gray-300">
                 (*) Los costos son estimados a efectos de comparación solamente, el presupuesto del proyecto debe determinarse a partir del Diseño Final
             </p>
-            <button onClick={handleSaveSelectedRows} className="mt-4 bg-green-500 text-white px-4 py-2 rounded">
+            <div className="flex justify-center mt-4">
+            <button onClick={handleSaveSelectedRows} className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700">
                 Guardar Selección
             </button>
+      </div>
+            
         </div>
     )
 }

@@ -80,12 +80,12 @@ const Paso2 = () => {
     }, [poblacion_horizonte, zonaEcologica]);
 
 
-//cargar automaticamente los parametros que indica la guia en sus tablas
+    //cargar automaticamente los parametros que indica la guia en sus tablas
     const handleCheckboxChange = (event) => {
-//cambiar de falso a verdarero para que muestre como chekeado
+        //cambiar de falso a verdarero para que muestre como chekeado
         setChecked(event.target.checked);
-  
-//declaramos un condicional if
+
+        //declaramos un condicional if
         if (event.target.checked) {
             //vaiables auxiliares
             let selectedData;
@@ -891,12 +891,14 @@ const Paso2 = () => {
                 onClose={handleClose}
             />
             <Tabla1 />
-            <button
-                className="px-4 py-2 font-semibold text-white bg-green-500 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-75"
-                onClick={handleGuardarClick}
-            >
-                Guardar Valores
-            </button>
+            <div className="flex justify-center mt-4">
+                <button
+                    className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700"
+                    onClick={handleGuardarClick}
+                >
+                    Guardar Valores
+                </button>
+            </div >
         </div >
     );
 };
