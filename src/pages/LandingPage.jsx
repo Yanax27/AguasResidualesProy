@@ -35,8 +35,8 @@ const LandingPage = () => {
         <p className="text-lg text-gray-200 mb-8">
         <b></b>
         <b></b>
-         <b>¡Para el uso eficaz y eficiente de la presente herramienta, es necesario tener previo
-           conocimiento de la "guia tecnica de seleccion de lineas de tratamiento de agua residual!</b>
+         <b>¡Para el uso eficáz y eficiente de la presente herramienta, es necesario tener previo
+           conocimiento de la "Guía técnica de selección de lineas de tratamiento de agua residual"!</b>
         </p>
       </div>
     </div>

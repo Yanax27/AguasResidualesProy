@@ -7,18 +7,18 @@ const Tabla4_2 = ({ setSelectedRowsTabla4_2 }) => {
   const [populationTerreno, setPopulationTerreno] = useState(0);
   const [filteredData, setFilteredData] = useState([]);
   const [checkedRows, setCheckedRows] = useState({});
-  const [selectedLines, setSelectedLinesState] = useState([]);
+  const [selectedLines, setSelectedLines] = useState([]);
 
   useEffect(() => {
     // Obtener zona seleccionada y horizonte poblacional del local storage
     const storedZone = localStorage.getItem('zonaEcologica') || '';
     const storedPopulation = parseInt(localStorage.getItem('poblacion_horizonte'), 10) || 0;
     const storedTerreno = parseInt(localStorage.getItem('area_terreno'), 10) || 0;
-   // const storedSelectedLines = JSON.parse(localStorage.getItem('selectedLines')) || [];
-  //  setSelectedLinesState(storedSelectedLines);
+    const storedSelectedLines = JSON.parse(localStorage.getItem('selectedLines')) || [];
     setSelectedZone(storedZone);
     setPopulationHorizon(storedPopulation);
     setPopulationTerreno(storedTerreno);
+    setSelectedLines(storedSelectedLines);
 
     // Obtener filas seleccionadas previamente para Tabla4_2
     const storedSelectedRowsTabla4_2 = JSON.parse(localStorage.getItem('selectedRowsTabla4_2')) || [];
@@ -32,8 +32,11 @@ const Tabla4_2 = ({ setSelectedRowsTabla4_2 }) => {
 
   useEffect(() => {
     if (selectedZone && populationHorizon) {
-      // Filtrar datos según la zona seleccionada
-      const filtered = dataSuperficie.filter(item => item.zona_ecologica === selectedZone);
+      // Filtrar datos según la zona seleccionada y las líneas seleccionadas
+      const filtered = dataSuperficie.filter(item => 
+        item.zona_ecologica === selectedZone && 
+        selectedLines.some(selectedLine => selectedLine.linea === item.linea_tratamiento)
+      );
 
       // Interpolar el horizonte poblacional si no se encuentra un valor exacto
       const interpolatedData = filtered.map(item => {
@@ -65,7 +68,7 @@ const Tabla4_2 = ({ setSelectedRowsTabla4_2 }) => {
 
       setFilteredData(interpolatedData);
     }
-  }, [selectedZone, populationHorizon, populationTerreno]);
+  }, [selectedZone, populationHorizon, populationTerreno, selectedLines]);
 
   const handleCheckboxChange = (id) => {
     setCheckedRows((prev) => {

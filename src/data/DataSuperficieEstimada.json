@@ -565,7 +565,7 @@
       },
       {
         "id": 19,
-        "linea_tratamiento": "Línea 6.3 (soporte áridos)",
+        "linea_tratamiento": "Línea 6.3",
         "zona_ecologica": "Valles",
         "partidas": {
           "1000_habitantes": {
@@ -608,7 +608,7 @@
       },
       {
         "id": 20,
-        "linea_tratamiento": "Línea 6.3 (soporte áridos)",
+        "linea_tratamiento": "Línea 6.3",
         "zona_ecologica": "Llanos",
         "partidas": {
           "1000_habitantes": {

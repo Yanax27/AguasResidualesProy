@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-  import criteriosData from "../data/CriteriosSeleccion.json";
+import criteriosData from "../data/CriteriosSeleccion.json";
 
 function Paso3() {
   const [criterios, setCriterios] = useState(criteriosData);
@@ -59,15 +59,18 @@ function Paso3() {
       <p className="text-gray-600 dark:text-gray-300 text-justify mb-2">
         En el siguiente listado, marque los criterios que considera pertinentes para el proceso de selección de la Línea de Tratamiento, en caso de considerar otro criterio adicional a los ya listados, marque la opción 'otro' e introduzca el nombre del criterio.
       </p>
+      
       <div className="overflow-x-auto shadow-md sm:rounded-lg">
+        <div class="max-w-3xl mx-auto py-8">
+          <div class="overflow-x-auto shadow-md sm:rounded-lg mb-1">
+          <div className="flex justify-end mb-2">
         <button
           className="mt-1 px-4 py-2 font-semibold text-white bg-green-500 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-75"
           onClick={handleSaveCriterios}
         >
           Guardar criterios
         </button>
-        <div class="max-w-3xl mx-auto py-8">
-          <div class="overflow-x-auto shadow-md sm:rounded-lg mb-1">
+      </div>
             <table className="w-full table-auto border-collapse border border-gray-200 bg-white">
               <thead className="bg-blue-400 text-white">
                 <tr>
