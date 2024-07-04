@@ -235,6 +235,338 @@ const Paso2 = () => {
         alert("Valores guardados correctamente");
     };
 
+    const getAlertForPh = () => {
+        const phValue = parseFloat(ph);
+        if (isNaN(phValue)) {
+          return null;
+        }
+    
+        if (phValue < 6.5) {
+          return (
+            <Alert severity="warning">
+              Valor de pH={ph} fuera del rango de valores típicos de aguas residuales urbanas, posibles vertidos industriales.
+            </Alert>
+          );
+        }
+    
+        if (phValue >= 6.5 && phValue <= 8.5) {
+          return (
+            <Alert severity="success">
+              Valor del pH={ph} es típico de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+    
+        if (phValue > 8.5) {
+          return (
+            <Alert severity="warning">
+              Valor de pH={ph} fuera del rango de valores típicos de aguas residuales urbanas, posibles vertidos industriales.
+            </Alert>
+          );
+        }
+    
+        return null;
+      };
+      const getAlertForConductividad = () => {
+        const conductividadValue = parseFloat(conductividad);
+        if (isNaN(conductividadValue)) {
+          return null;
+        }
+      
+        if (conductividadValue < 500) {
+          return (
+            <Alert severity="warning">
+              Valor de conductividad Cond. = {conductividad} µS/cm por debajo de los límites típicos en aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        if (conductividadValue >= 500 && conductividadValue <= 1500) {
+          return (
+            <Alert severity="success">
+              Valor de conductividad Cond. = {conductividad} µS/cm es característico de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        if (conductividadValue > 1500) {
+          return (
+            <Alert severity="warning">
+              Valor de Conductividad Cond. = {conductividad} µS/cm es elevado, posibles vertidos de origen industrial.
+            </Alert>
+          );
+        }
+      
+        return null;
+      };
+      //para temperatura del agua
+      const getAlertForTempAgua = () => {
+        const tempAguaValue = parseFloat(temperaturaAgua);
+        if (isNaN(tempAguaValue)) {
+          return null;
+        }
+      
+        if (tempAguaValue < 10) {
+          return (
+            <Alert severity="warning">
+              La temperatura {tempAguaValue}°C está fuera del rango de valores típicos de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        if (tempAguaValue >= 10 && tempAguaValue <= 30) {
+          return (
+            <Alert severity="success">
+              La temperatura {tempAguaValue}°C es típica en aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        if (tempAguaValue > 30) {
+          return (
+            <Alert severity="warning">
+              La temperatura {tempAguaValue}°C está fuera del rango de valores típicos de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        return null;
+      };
+      // Para aceites y grasas:
+      const getAlertForAceitesGrasas = () => {
+        const aceitesGrasasValue = parseFloat(aceitesGrasas);
+        if (isNaN(aceitesGrasasValue)) {
+          return null;
+        }
+      
+        if (aceitesGrasasValue < 100) {
+          return (
+            <Alert severity="warning">
+              La concentración de aceites y grasas {aceitesGrasasValue} mg/L está fuera del rango de valores típicos de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        if (aceitesGrasasValue >= 100 && aceitesGrasasValue <= 150) {
+          return (
+            <Alert severity="success">
+              La concentración de aceites y grasas {aceitesGrasasValue} mg/L es típica de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        if (aceitesGrasasValue > 150) {
+          return (
+            <Alert severity="warning">
+              La concentración de aceites y grasas {aceitesGrasasValue} mg/L está fuera del rango de valores típicos de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        return null;
+      };
+      //Para solidos en suspension
+      const getAlertForSolidosSuspension = () => {
+        const solidosSuspensionValue = parseFloat(solidosSuspension);
+        if (isNaN(solidosSuspensionValue)) {
+          return null;
+        }
+      
+        if (solidosSuspensionValue < 100) {
+          return (
+            <Alert severity="warning">
+              La concentración de sólidos en suspensión {solidosSuspensionValue} mg/L está fuera del rango de valores típicos de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        if (solidosSuspensionValue >= 100 && solidosSuspensionValue <= 350) {
+          return (
+            <Alert severity="success">
+              La concentración de sólidos en suspensión {solidosSuspensionValue} mg/L es típica de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        if (solidosSuspensionValue > 350) {
+          return (
+            <Alert severity="warning">
+              La concentración de sólidos en suspensión {solidosSuspensionValue} mg/L está fuera del rango de valores típicos de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        return null;
+      };
+      //para dqo
+      const getAlertForDqo = () => {
+        const dqoValue = parseFloat(dqo);
+        if (isNaN(dqoValue)) {
+          return null;
+        }
+      
+        if (dqoValue < 250) {
+          return (
+            <Alert severity="warning">
+              La concentración de DQO {dqoValue} mg/L está fuera del rango de valores típicos de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        if (dqoValue >= 250 && dqoValue <= 1000) {
+          return (
+            <Alert severity="success">
+              La concentración de DQO {dqoValue} mg/L es típica de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        if (dqoValue > 1000) {
+          return (
+            <Alert severity="warning">
+              La concentración de DQO {dqoValue} mg/L está fuera del rango de valores típicos de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        return null;
+      };
+      //para nitrogeno
+      const getAlertForNt = () => {
+        const ntValue = parseFloat(nt);
+        if (isNaN(ntValue)) {
+          return null;
+        }
+      
+        if (ntValue < 20) {
+          return (
+            <Alert severity="warning">
+              El valor de contenido de nitrógeno total {ntValue} mg/L está fuera del rango de valores típicos de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        if (ntValue >= 20 && ntValue <= 85) {
+          return (
+            <Alert severity="success">
+              El valor de contenido de nitrógeno total {ntValue} mg/L es típico de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        if (ntValue > 85) {
+          return (
+            <Alert severity="warning">
+              El valor de contenido de nitrógeno total {ntValue} mg/L está fuera del rango de valores típicos de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        return null;
+      };
+      //para Fosforo
+      const getAlertForPt = () => {
+        const ptValue = parseFloat(pt);
+        if (isNaN(ptValue)) {
+          return null;
+        }
+      
+        if (ptValue < 4) {
+          return (
+            <Alert severity="warning">
+              El valor contenido de fósforo total {ptValue} mg/L está fuera del rango de valores típicos de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        if (ptValue >= 4 && ptValue <= 15) {
+          return (
+            <Alert severity="success">
+              El valor de contenido de fósforo total {ptValue} mg/L es típico de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        if (ptValue > 15) {
+          return (
+            <Alert severity="warning">
+              El valor contenido de fósforo total {ptValue} mg/L está fuera del rango de valores típicos de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        return null;
+      };
+      //para DQO5
+      const getAlertForDbo5 = () => {
+        const dbo5Value = parseFloat(dbo5);
+        if (isNaN(dbo5Value)) {
+          return null;
+        }
+      
+        if (dbo5Value < 110) {
+          return (
+            <Alert severity="warning">
+              La concentración de DBO(5) {dbo5Value} mg/L está fuera del rango de valores típicos de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        if (dbo5Value >= 110 && dbo5Value <= 400) {
+          return (
+            <Alert severity="success">
+              La concentración de DBO(5) {dbo5Value} mg/L es típica de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        if (dbo5Value > 400) {
+          return (
+            <Alert severity="warning">
+              La concentración de DBO(5) {dbo5Value} mg/L está fuera del rango de valores típicos de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        return null;
+      };
+    //para coliformes totales
+    const getAlertForColiformesTotales = () => {
+        const coliformesValue = parseFloat(coliformesTotales);
+        if (isNaN(coliformesValue)) {
+          return null;
+        }
+      
+        const lowerLimit = Math.pow(10, 6); // 10^6
+        const upperLimit = Math.pow(10, 9); // 10^9
+      
+        if (coliformesValue < lowerLimit) {
+          return (
+            <Alert severity="warning">
+              La concentración de Coliformes Totales {coliformesValue} NMP/100 mL está fuera del rango de valores típicos de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        if (coliformesValue >= lowerLimit && coliformesValue <= upperLimit) {
+          return (
+            <Alert severity="success">
+              La concentración de Coliformes Totales {coliformesValue} NMP/100 mL es típica de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        if (coliformesValue > upperLimit) {
+          return (
+            <Alert severity="warning">
+              La concentración de Coliformes Totales {coliformesValue} NMP/100 mL está fuera del rango de valores típicos de aguas residuales urbanas.
+            </Alert>
+          );
+        }
+      
+        return null;
+      };
+      
     return (
         <div className="p-4 rounded-lg">
             <h2 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">Selección y Dimensionamiento de la Línea de Tratamiento</h2>
@@ -482,7 +814,7 @@ const Paso2 = () => {
                                 />
                             </td>
                             <td className="border border-gray-200 px-4 py-2">6.5 - 8.5</td>
-                        </tr>
+                        </tr>                      
                         <tr>
                             <td className="border border-gray-200 px-4 py-2">Conductividad</td>
                             <td className="border border-gray-200 px-4 py-2">mS/cm</td>
@@ -611,6 +943,16 @@ const Paso2 = () => {
                         </tr>
                     </tbody>
                 </table>
+                {getAlertForPh()}
+                {getAlertForConductividad()}
+                {getAlertForTempAgua()}
+                {getAlertForAceitesGrasas()}
+                {getAlertForSolidosSuspension()}
+                {getAlertForDbo5()}
+                {getAlertForDqo()}
+                {getAlertForNt()}
+                {getAlertForPt()}         
+                {getAlertForColiformesTotales()}
             </div>
             <p className="text-gray-600 dark:text-gray-300 text-justify mb-2">
                 (*) Valores usuales para aguas residuales urbanas, el límite inferior hace referencia a una contaminación débil y el límite superior a una contaminación fuerte.
