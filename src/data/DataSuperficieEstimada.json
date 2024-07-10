@@ -478,8 +478,8 @@
         }
       },
       {
-        "id": 17,
-        "linea_tratamiento": "Líneas 6.1 y 6.2 (soporte plástico)",
+        "id": 171,
+        "linea_tratamiento": "Línea 6.1",
         "zona_ecologica": "Altiplano",
         "partidas": {
           "1000_habitantes": {
@@ -521,48 +521,49 @@
         }
       },
       {
-        "id": 18,
-        "linea_tratamiento": "Líneas 6.1 y 6.2 (soporte áridos)",
+        "id": 172,
+        "linea_tratamiento": "Línea 6.2",
         "zona_ecologica": "Altiplano",
         "partidas": {
           "1000_habitantes": {
-            "linea_agua": 0.60,
+            "linea_agua": 0.50,
             "linea_lodos": 0.17,
             "desinfeccion": 0.091,
-            "superficie_total": 0.86
+            "superficie_total": 0.76
           },
           "2000_habitantes": {
-            "linea_agua": 0.43,
+            "linea_agua": 0.34,
             "linea_lodos": 0.21,
             "desinfeccion": 0.050,
-            "superficie_total": 0.69
+            "superficie_total": 0.60
           },
           "5000_habitantes": {
-            "linea_agua": 0.29,
+            "linea_agua": 0.21,
             "linea_lodos": 0.22,
             "desinfeccion": 0.024,
-            "superficie_total": 0.53
+            "superficie_total": 0.45
           },
           "10000_habitantes": {
-            "linea_agua": 0.32,
+            "linea_agua": 0.23,
             "linea_lodos": 0.24,
             "desinfeccion": 0.015,
-            "superficie_total": 0.58
+            "superficie_total": 0.49
           },
           "25000_habitantes": {
-            "linea_agua": 0.21,
+            "linea_agua": 0.14,
             "linea_lodos": 0.19,
             "desinfeccion": 0.008,
-            "superficie_total": 0.48
+            "superficie_total": 0.34
           },
           "50000_habitantes": {
-            "linea_agua": 0.18,
+            "linea_agua": 0.12,
             "linea_lodos": 0.23,
             "desinfeccion": 0.007,
-            "superficie_total": 0.42
+            "superficie_total": 0.36
           }
         }
       },
+     
       {
         "id": 19,
         "linea_tratamiento": "Línea 6.3",
@@ -653,7 +654,50 @@
      
       {
         "id": 22,
-        "linea_tratamiento": "Líneas 7.1 y 7.2",
+        "linea_tratamiento": "Línea 7.1",
+        "zona_ecologica": "Altiplano",
+        "partidas": {
+          "1000_habitantes": {
+            "linea_agua": 0.47,
+            "linea_lodos": 0.17,
+            "desinfeccion": 0.091,
+            "superficie_total": 0.73
+          },
+          "2000_habitantes": {
+            "linea_agua": 0.30,
+            "linea_lodos": 0.21,
+            "desinfeccion": 0.050,
+            "superficie_total": 0.56
+          },
+          "5000_habitantes": {
+            "linea_agua": 0.19,
+            "linea_lodos": 0.22,
+            "desinfeccion": 0.024,
+            "superficie_total": 0.43
+          },
+          "10000_habitantes": {
+            "linea_agua": 0.15,
+            "linea_lodos": 0.24,
+            "desinfeccion": 0.015,
+            "superficie_total": 0.41
+          },
+          "25000_habitantes": {
+            "linea_agua": 0.11,
+            "linea_lodos": 0.19,
+            "desinfeccion": 0.008,
+            "superficie_total": 0.31
+          },
+          "50000_habitantes": {
+            "linea_agua": 0.12,
+            "linea_lodos": 0.23,
+            "desinfeccion": 0.007,
+            "superficie_total": 0.36
+          }
+        }
+      },
+      {
+        "id": 22,
+        "linea_tratamiento": "Línea 7.2",
         "zona_ecologica": "Altiplano",
         "partidas": {
           "1000_habitantes": {

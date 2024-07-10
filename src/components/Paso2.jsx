@@ -611,16 +611,16 @@ const Paso2 = () => {
       <p className="text-gray-600 dark:text-gray-300 text-justify mb-4">
         La selección y dimensionamiento de la Línea de Tratamiento que mejor se adecúe a las condiciones locales del entorno y a las características de las aguas a tratar, requiere de la recolección de información sobre los factores que condicionan e influyen en el desempeño de la PTAR. Los factores que mínimamente deben considerarse se detallan en el Capítulo 4 de la Guía, y se indican a continuación:
       </p>
-      <span class="flex items-center">
-        <h3 class=" text-lg font-semibold text-gray-800 dark:text-white pr-6">2.1. Normas Técnicas Existentes</h3>
-        <span class="h-px flex-1 bg-black"></span>
+      <span className="flex items-center">
+        <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6">2.1. Normas Técnicas Existentes</h3>
+        <span className="h-px flex-1 bg-black"></span>
       </span>
       <p className="text-gray-600 dark:text-gray-300 text-justify mb-4">
         Tanto la selección de la Línea de Tratamiento, como la redacción del proyecto de la PTAR, deben realizarse respetando la normativa técnica aplicable de nuestro medio, la misma se encuentra detallada en el apartado 4.1 de la Guía.
       </p>
-      <span class="flex items-center">
-        <h3 class=" text-lg font-semibold text-gray-800 dark:text-white pr-6">2.2. Información de Carácter Administrativo</h3>
-        <span class="h-px flex-1 bg-black"></span>
+      <span className="flex items-center">
+        <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6">2.2. Información de Carácter Administrativo</h3>
+        <span className="h-px flex-1 bg-black"></span>
       </span>
       <p className="text-gray-600 dark:text-gray-300 text-justify mb-2">
         De forma previa al inicio de la redacción del proyecto de la PTAR, se debe recopilar toda la información de carácter administrativo y legal, que pueda condicionar la ejecución de las obras. De forma referencial se debe considerar:
@@ -632,9 +632,9 @@ const Paso2 = () => {
         <li>- El proyecto debe enmarcarse en la Planificación Sectorial y/o Planes Maestros</li>
       </ul>
 
-      <span class="flex items-center">
-        <h3 class=" text-lg font-semibold text-gray-800 dark:text-white pr-6">2.3. Población servida y población horizonte del proyecto	</h3>
-        <span class="h-px flex-1 bg-black"></span>
+      <span className="flex items-center">
+        <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6">2.3. Población servida y población horizonte del proyecto	</h3>
+        <span className="h-px flex-1 bg-black"></span>
       </span>
       <p className="text-gray-600 text-justify dark:text-gray-300 mb-2">
         La Población Servida hace referencia al número de habitantes dentro del área de servicio de la PTAR, la misma debe determinarse a través de los censos oficiales y/o estudio socioeconómico.
@@ -661,9 +661,9 @@ const Paso2 = () => {
       <p className="text-blue-600 dark:text-gray-300">
         Nota: El rango de aplicación de la herramienta es de 1,000 a 50,000 habitantes.
       </p>
-      <span class="flex items-center">
-        <h3 class=" text-lg font-semibold text-gray-800 dark:text-white pr-4">2.4. Instalaciones Existentes de Abastecimiento, Alcantarillado y Tratamiento de Aguas Residuales</h3>
-        <span class="h-px flex-1 bg-black"></span>
+      <span className="flex items-center">
+        <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-4">2.4. Instalaciones Existentes de Abastecimiento, Alcantarillado y Tratamiento de Aguas Residuales</h3>
+        <span className="h-px flex-1 bg-black"></span>
       </span>
       <p className="text-gray-600 dark:text-gray-300 text-justify mb-2">
         Se debe recopilar información sobre las características de los sistemas de abastecimiento de agua potable y alcantarillado sanitario existentes en la zona del proyecto.
@@ -682,9 +682,9 @@ const Paso2 = () => {
         <li>- Planos de la infraestructura existente (redes, conexiones domiciliarias, estaciones de bombeo, etc)</li>
       </ul>
 
-      <span class="flex items-center">
-        <h3 class=" text-lg font-semibold text-gray-800 dark:text-white pr-6">2.5. Gestión de los sistemas de abastecimiento y saneamiento</h3>
-        <span class="h-px flex-1 bg-black"></span>
+      <span className="flex items-center">
+        <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6">2.5. Gestión de los sistemas de abastecimiento y saneamiento</h3>
+        <span className="h-px flex-1 bg-black"></span>
       </span>
       <p className="text-gray-600 dark:text-gray-300 text-justify mb-2">
         Con la finalidad de asegurar la sostenibilidad de la PTAR a lo largo de su vida útil, el proyecto debe contar con la siguiente información:
@@ -710,9 +710,9 @@ const Paso2 = () => {
         >
         </input> Bs.
       </p>
-      <span class="flex items-center">
-        <h3 class=" text-lg font-semibold text-gray-800 dark:text-white pr-6">2.6. Condicionantes para la selección del terreno en el que se ubicará la PTAR</h3>
-        <span class="h-px flex-1 bg-black"></span>
+      <span className="flex items-center">
+        <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6">2.6. Condicionantes para la selección del terreno en el que se ubicará la PTAR</h3>
+        <span className="h-px flex-1 bg-black"></span>
       </span>
       <p className="text-gray-600 dark:text-gray-300 text-justify mb-2">
         La selección del terreno en el que se construirá la PTAR constituye un aspecto de suma importancia, dado que una buena elección de la ubicación conlleva a una
@@ -748,9 +748,9 @@ const Paso2 = () => {
         <li>- Determinación de los niveles esperados de crecida</li>
         <li>- Afecciones ambientales en el entorno</li>
       </ul>
-      <span class="flex items-center">
-        <h3 class=" text-lg font-semibold text-gray-800 dark:text-white pr-6">2.7. Condicionantes climáticas y geográficas de la zona de actuación </h3>
-        <span class="h-px flex-1 bg-black"></span>
+      <span className="flex items-center">
+        <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6">2.7. Condicionantes climáticas y geográficas de la zona de actuación </h3>
+        <span className="h-px flex-1 bg-black"></span>
       </span>
       <p className="text-gray-600 dark:text-gray-300 text-justify mb-2">
         Las características climáticas de la zona de emplazamiento de la PTAR influyen sobre el comportamiento de las diferentes tecnologías de tratamiento disponibles, y pueden llegar a ser un factor limitante para la implantación de algunas de ellas. Esto justifica la recopilación, con carácter previo, de la información de las características climatológicas de la zona de actuación. La información básica que debe recopilarse a este respecto es la siguiente:
@@ -780,9 +780,9 @@ const Paso2 = () => {
         <option value="Valles">Valles</option>
         <option value="Llanos">Llanos</option>
       </select>
-      <span class="flex items-center">
-        <h3 class=" text-lg font-semibold text-gray-800 dark:text-white pr-6">2.8. Gestión de las aguas de lluvia</h3>
-        <span class="h-px flex-1 bg-black"></span>
+      <span className="flex items-center">
+        <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6">2.8. Gestión de las aguas de lluvia</h3>
+        <span className="h-px flex-1 bg-black"></span>
       </span>
 
       <p className="text-gray-600 dark:text-gray-300 text-justify mb-2">En sistemas de alcantarillado sanitario combinado, durante la ocurrencia de picos de precipitación las aguas conducidas a la PTAR pueden ocasionar problemas en la operación, dado que se incrementan de forma súbita los caudales de aguas a tratar. Entonces, la correcta gestión de las aguas de lluvia constituye un aspecto de suma importancia a la hora de reducir al máximo el impacto que provocan sobre los medios receptores los caudales en exceso, provocados por las precipitaciones, y que no pueden ser tratados en las PTAR al superarse su capacidad de diseño.</p>
@@ -792,9 +792,9 @@ const Paso2 = () => {
         <li className='text-justify mb-2'>- Como alternativa se recomienda dejar pasar un caudal superior al caudal punta en tiempo seco, para evitar el vertido al cauce receptor de una parte importante de sólidos, arenas y grasas. En este caso, se diseña el pretratamiento con capacidad para 5 ó 6 veces el caudal medio y se construye un aliviadero a la salida del mismo, de forma que al tratamiento sólo pase un caudal equivalente al punta en tiempo seco.</li>
         <li className='text-justify mb-2'>- Otras opciones pasan por implantar en cabecera de las PTAR tanques de tormenta, o tanques ecualizadores, que permitan almacenar los caudales excedentes generados en los primeros 20-30 minutos de lluvia para, una vez finalizado el periodo de precipitaciones intensas, proceder al tratamiento paulatino de estas aguas en la PTAR.</li>
       </ul>
-      <span class="flex items-center">
-        <h3 class=" text-lg font-semibold text-gray-800 dark:text-white pr-6">2.9. Características del agua residual a tratar</h3>
-        <span class="h-px flex-1 bg-black"></span>
+      <span className="flex items-center">
+        <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6">2.9. Características del agua residual a tratar</h3>
+        <span className="h-px flex-1 bg-black"></span>
       </span>
       <p className="text-gray-600 dark:text-gray-300 text-justify mb-2">Para el adecuado dimensionamiento de la PTAR se requiere
         cuantificar los caudales y características de las aguas a tratar, sus oscilaciones diarias y estacionales y sus posibles
@@ -1183,9 +1183,9 @@ const Paso2 = () => {
       <p className="text-gray-600 dark:text-gray-300 text-justify mb-2">
         (**) La estimación de las características y caudal de las aguas a tratar se realiza en base a la Población Horizonte del proyecto, la Zona Ecológica y la información establecida en el capítulo 5 de la Guía.
       </p>
-      <span class="flex items-center">
-        <h3 class=" text-lg font-semibold text-gray-800 dark:text-white pr-6">2.10. Calidad exigida al efluente tratado </h3>
-        <span class="h-px flex-1 bg-black"></span>
+      <span className="flex items-center">
+        <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6">2.10. Calidad exigida al efluente tratado </h3>
+        <span className="h-px flex-1 bg-black"></span>
       </span>
       <p className="text-gray-600 dark:text-gray-300 text-justify mb-2">
         Los requisitos exigibles en Bolivia a los efluentes tratados en la PTAR se establecen
@@ -1236,9 +1236,9 @@ const Paso2 = () => {
           </tbody>
         </table>
       </div>
-      <span class="flex items-center">
-        <h3 class=" text-lg font-semibold text-gray-800 dark:text-white pr-6">2.11. Posible reúso de los efluentes tratados</h3>
-        <span class="h-px flex-1 bg-black"></span>
+      <span className="flex items-center">
+        <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6">2.11. Posible reúso de los efluentes tratados</h3>
+        <span className="h-px flex-1 bg-black"></span>
       </span>
       <p className="text-gray-600 dark:text-gray-300 text-justify mb-2">
         En caso de la decisión de reusar el efluente de la nueva PTAR a implantar, deben establecerse las características exigidas para el efluente regenerado,
@@ -1252,11 +1252,11 @@ const Paso2 = () => {
         <li>- Los sistemas de almacenamiento y distribución necesarios de las aguas regeneradas, que permitan su empleo en el tipo de reúso elegido.</li>
         <li>- Los costos de construcción y explotación del sistema de regeneración y la forma de su financiación.</li>
       </ul>
-      <div class="p-2  mb-2">
-        <ul class="list-disc list-inside">
+      <div className="p-2  mb-2">
+        <ul className="list-disc list-inside">
           <li>
             <strong>USO 1:</strong> Para abastecimiento doméstico de agua potable después de:
-            <ul class="list-disc ml-6 mb-2">
+            <ul className="list-disc ml-6 mb-2">
               <li>a) sólo una desinfección y ningún tratamiento (Clase A)</li>
               <li>b) tratamiento solamente físico y desinfección (Clase B)</li>
               <li>c) tratamiento físico-químico completo: coagulación, floculación, filtración y desinfección (Clase C)</li>
@@ -1272,9 +1272,9 @@ const Paso2 = () => {
           <li><strong>USO 8:</strong> Para la navegación (Clases B, C y D)</li>
         </ul>
       </div>
-      <span class="flex items-center">
-        <h3 class=" text-lg font-semibold text-gray-800 dark:text-white pr-6">2.12. Seleccion Preliminar</h3>
-        <span class="h-px flex-1 bg-black"></span>
+      <span className="flex items-center">
+        <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6">2.12. Seleccion Preliminar</h3>
+        <span className="h-px flex-1 bg-black"></span>
       </span>
 
       <p className="text-gray-600 dark:text-gray-300 text-justify mb-2">
@@ -1303,5 +1303,4 @@ const Paso2 = () => {
     </div >
   );
 };
-
 export default Paso2;
