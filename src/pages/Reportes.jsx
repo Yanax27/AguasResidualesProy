@@ -44,9 +44,9 @@ const Reportes = () => {
 
   // Muestra el spinner mientras los datos se están cargando
   if (loading) {
-    return  <div className="flex justify-center items-center h-screen">
-    <SpinnerPdf />
-  </div>;
+    return <div className="flex justify-center items-center h-screen">
+      <SpinnerPdf />
+    </div>;
   }
 
   return (
@@ -77,7 +77,7 @@ const Reportes = () => {
                   onClick={() => handleDelete(reporte.id)}
                   className="bg-red-500 text-white px-2 py-1 rounded inline-flex items-center"
                 >
-                  <FontAwesomeIcon icon={faTrash}/>
+                  <FontAwesomeIcon icon={faTrash} />
                 </button>
               </td>
             </tr>

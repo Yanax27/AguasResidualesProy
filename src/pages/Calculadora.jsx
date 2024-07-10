@@ -56,17 +56,18 @@ const Calculadora = () => {
 
   return (
     <div className="p-4">
-      <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">
+      <h2 className="text-xl font-semibold text-gray-800 dadrk:text-white mb-4">
         Calculadora de Línea de Tratamiento
-      </h3>
+      </h2>
       <form onSubmit={handleSubmit} className="mb-4">
         <div className="mb-4">
-          <label htmlFor="poblacionHorizonte" className="block text-gray-700 dark:text-gray-300">
+          <label htmlFor="poblacionHorizonte" className="block text-gray-700 dark:text-gray-300 font-semibold">
             Población Horizonte:
           </label>
           <input
             type="number"
             id="poblacionHorizonte"
+            placeholder="Ingresa poblacion horizonte"
             value={poblacionHorizonte}
             onChange={(e) => setPoblacionHorizonte(e.target.value)}
             className="mt-1 block w-full p-2 border border-gray-300 rounded"
@@ -74,7 +75,7 @@ const Calculadora = () => {
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="zonaEcologica" className="block text-gray-700 dark:text-gray-300">
+          <label htmlFor="zonaEcologica" className="block text-gray-700 dark:text-gray-300 font-semibold">
             Zona Ecológica:
           </label>
           <select
@@ -91,39 +92,42 @@ const Calculadora = () => {
           </select>
         </div>
         <div className="mb-4">
-          <label htmlFor="solidosSuspension" className="block text-gray-700 dark:text-gray-300">
+          <label htmlFor="solidosSuspension" className="block text-gray-700 dark:text-gray-300 font-semibold">
             Sólidos en suspensión:
           </label>
           <input
             type="number"
             id="solidosSuspension"
             value={solidosSuspension}
+            placeholder="Ingresa solidos en suspensión"
             onChange={(e) => setSolidosSuspension(e.target.value)}
             className="mt-1 block w-full p-2 border border-gray-300 rounded"
             required
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="dbo5" className="block text-gray-700 dark:text-gray-300">
+          <label htmlFor="dbo5" className="block text-gray-700 dark:text-gray-300 font-semibold">
             DBO5:
           </label>
           <input
             type="number"
             id="dbo5"
             value={dbo5}
+            placeholder="Ingresa DBO5"
             onChange={(e) => setDbo5(e.target.value)}
             className="mt-1 block w-full p-2 border border-gray-300 rounded"
             required
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="dqo" className="block text-gray-700 dark:text-gray-300">
+          <label htmlFor="dqo" className="block text-gray-700 dark:text-gray-300 font-semibold">
             DQO:
           </label>
           <input
             type="number"
             id="dqo"
             value={dqo}
+            placeholder="Ingresa DQO"
             onChange={(e) => setDqo(e.target.value)}
             className="mt-1 block w-full p-2 border border-gray-300 rounded"
             required
