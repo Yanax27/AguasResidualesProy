@@ -107,6 +107,15 @@ function CriterioA({ onSaveCriterios }) {
                     </div>
                 </div>
             </div>
+            <span className="flex items-center mb-2">
+                <h3 className="text-lg font-semibold text-gray-800 dark:text-white pr-6">
+                TOLERANCIA A LAS VARIACIONES DE CAUDAL Y CARGA.
+                </h3>
+                <span className="h-px flex-1 bg-black"></span>
+            </span>
+            <p className="text-gray-600 dark:text-gray-300 text-justify mb-2">
+            Se debe valorar cada alternativa en comparación con las demás, en relación su tolerancia a las variaciones de caudal y de carga contaminante. Como apoyo a la valoración puede considerar la tolerancia indicados en el cuadro de la derecha, recuerde: A mejor tolerancia le corresponde mayor valoración            
+            </p>      
             <TablaCriterios
                 lineas={lineasTabla4_2}
                 subcriterios={a3}

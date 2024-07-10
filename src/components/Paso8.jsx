@@ -44,7 +44,7 @@ const Paso8 = () => {
         return Object.values(valores).reduce((acc, item) => acc + item, 0);
     };
 
-    const linea1 = "Línea 6.3 (soporte áridos)";
+    const linea1 = "Línea 6.3";
     const linea2 = "Línea 7.3";
 
     const puntuacionTotalLinea1 = calcularPuntuacionTotal({
@@ -175,8 +175,13 @@ const Paso8 = () => {
                         </tr>
                     </tbody>
                 </table>
-                <div className="flex justify-center mt-4">
-  
+                <div className="mt-4 flex justify-center">
+                    <button
+                        className="bg-green-500 text-white px-4 py-2 rounded"
+                        onClick={saveSelection}
+                    >
+                        Guardar selección
+                    </button>
                 </div>
             </div>
         </div>
