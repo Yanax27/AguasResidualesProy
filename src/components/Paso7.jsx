@@ -46,8 +46,7 @@ const Paso7 = () => {
         localStorage.setItem('valoresCriterioE', JSON.stringify(valoresCriterioE));
         localStorage.setItem('valoresCriterioG', JSON.stringify(valoresCriterioG));
         localStorage.setItem('valoresCriterioH', JSON.stringify(valoresCriterioH));
-        //localStorage.removeItem('valoresCriteriosAE')
-        //console.log("Datos guardados:", valoresCriterioA, valoresCriterioE);
+        alert('Valores guardados exitosamente');
     };
 
     return (

@@ -158,7 +158,7 @@ const Paso9 = () => {
             <tr className="text-lg font-semibold bg-blue-400 text-white">
               <th className="px-4 py-2">Costo de construcción estimado (Bs)</th>
               <th className="px-4 py-2">Costo anual estimado de O&M (Bs)</th>
-            </tr>cd
+            </tr>
           </thead>
           <tbody>
             <tr className="text-lg font-semibold">
@@ -196,13 +196,14 @@ const Paso9 = () => {
           </div>
         )
       )}
-
-      <button
-        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
-        onClick={handleSaveClick}
-      >
-        Guardar Selección Final
-      </button>
+       <div className="mt-4 flex justify-center">
+                    <button
+                        className="bg-green-500 text-white px-4 py-2 rounded"
+                        onClick={handleSaveClick}
+                    >
+                        Guardar Selección Final
+                    </button>
+                </div>
     </div>
   );
 };
