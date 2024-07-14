@@ -92,7 +92,7 @@ const Paso2 = () => {
       let auxData1;
       let auxData2;
 
-      //condiiconal de eleleccion  para ddatos de zona ecologica
+      //condiciconal de eleleccion  para ddatos de zona ecologica
       switch (zonaEcologica) {
         case "Altiplano":
           selectedData = dataAltiplano;
