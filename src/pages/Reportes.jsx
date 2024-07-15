@@ -5,9 +5,12 @@ import { Link } from "react-router-dom";
 import swal from 'sweetalert';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faTrash } from "@fortawesome/free-solid-svg-icons";
+import SpinnerPdf from "../components/SpinnerPdf";
+
 
 const Reportes = () => {
   const [reportes, setReportes] = useState([]);
+  const [loading, setLoading] = useState(true); // Estado para controlar la carga
 
   useEffect(() => {
     const fetchReportes = async () => {
@@ -17,6 +20,7 @@ const Reportes = () => {
         ...doc.data(),
       }));
       setReportes(reportesList);
+      setLoading(false); // Cuando se cargan los datos, establece loading a false
     };
 
     fetchReportes();
@@ -37,6 +41,13 @@ const Reportes = () => {
       swal('¡Eliminado!', 'El reporte ha sido eliminado.', 'success');
     }
   };
+
+  // Muestra el spinner mientras los datos se están cargando
+  if (loading) {
+    return <div className="flex justify-center items-center h-screen">
+      <SpinnerPdf />
+    </div>;
+  }
 
   return (
     <div className="container mx-auto p-4">
@@ -61,14 +72,12 @@ const Reportes = () => {
               <td className="border px-4 py-2 text-center space-x-2">
                 <Link to={`/dashboard/detalle-reporte/${reporte.id}`} className="bg-blue-500 text-white px-2 py-1 rounded inline-flex items-center">
                   <FontAwesomeIcon icon={faEye} />
-                  
                 </Link>
                 <button
                   onClick={() => handleDelete(reporte.id)}
                   className="bg-red-500 text-white px-2 py-1 rounded inline-flex items-center"
                 >
-                  <FontAwesomeIcon icon={faTrash}/>
-                  
+                  <FontAwesomeIcon icon={faTrash} />
                 </button>
               </td>
             </tr>

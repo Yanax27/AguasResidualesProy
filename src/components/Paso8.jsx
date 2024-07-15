@@ -6,6 +6,7 @@ const Paso8 = () => {
     const [valoresCriterioG, setValoresCriterioG] = useState([]);
     const [valoresCriterioH, setValoresCriterioH] = useState([]);
     const [selectedLine, setSelectedLine] = useState('');
+    const [lineasTratamiento, setLineasTratamiento] = useState([]);
 
     useEffect(() => {
         setValoresCriterioA(JSON.parse(localStorage.getItem('valoresCriterioA')) || []);
@@ -17,6 +18,9 @@ const Paso8 = () => {
         if (savedSelectedLine) {
             setSelectedLine(savedSelectedLine);
         }
+
+        const selectedRowsTabla = JSON.parse(localStorage.getItem('selectedRowsTabla4_2')) || [];
+        setLineasTratamiento(selectedRowsTabla.map(row => row.linea_tratamiento));
     }, []);
 
     const agruparPorLinea = (valores) => {
@@ -44,30 +48,23 @@ const Paso8 = () => {
         return Object.values(valores).reduce((acc, item) => acc + item, 0);
     };
 
-    const linea1 = "Línea 6.3";
-    const linea2 = "Línea 7.3";
+    const puntuacionesTotales = lineasTratamiento.reduce((acc, linea) => {
+        acc[linea] = calcularPuntuacionTotal({
+            ...valoresAgrupadosA[linea],
+            ...valoresAgrupadosE[linea],
+            ...valoresAgrupadosG[linea],
+            ...valoresAgrupadosH[linea]
+        });
+        return acc;
+    }, {});
 
-    const puntuacionTotalLinea1 = calcularPuntuacionTotal({
-        ...valoresAgrupadosA[linea1],
-        ...valoresAgrupadosE[linea1],
-        ...valoresAgrupadosG[linea1],
-        ...valoresAgrupadosH[linea1]
-    });
-
-    const puntuacionTotalLinea2 = calcularPuntuacionTotal({
-        ...valoresAgrupadosA[linea2],
-        ...valoresAgrupadosE[linea2],
-        ...valoresAgrupadosG[linea2],
-        ...valoresAgrupadosH[linea2]
-    });
-
-    const handleLineSelection = (linea) => {
-        setSelectedLine(linea);
+    const handleLineSelection = (event, linea) => {
+        setSelectedLine(event.target.checked ? linea : '');
     };
 
     const saveSelection = () => {
         localStorage.setItem('selectedLine', selectedLine);
-        localStorage.removeItem("LineaSeleccionadaFinal")
+        localStorage.removeItem("LineaSeleccionadaFinal");
         alert('Selección guardada: ' + selectedLine);
     };
 
@@ -88,99 +85,101 @@ const Paso8 = () => {
                     <thead className="bg-blue-400 text-white">
                         <tr>
                             <th className="border border-gray-200 px-4 py-2">MATRIZ DE DECISIÓN</th>
-                            <th className="border border-gray-200 px-4 py-2">{linea1}</th>
-                            <th className="border border-gray-200 px-4 py-2">{linea2}</th>
+                            {lineasTratamiento.map(linea => (
+                                <th key={linea} className="border border-gray-200 px-4 py-2">{linea}</th>
+                            ))}
                         </tr>
                     </thead>
                     <tbody>
                         <tr className="bg-blue-400 text-white">
                             <td className="border border-gray-200 px-4 py-2">CRITERIOS DE SELECCIÓN</td>
-                            <td className={`border border-gray-200 px-4 py-2 text-center`}>{linea1}</td>
-                            <td className={`border border-gray-200 px-4 py-2 text-center`}>{linea2}</td>
+                            {lineasTratamiento.map(linea => (
+                                <td key={linea} className={`border border-gray-200 px-4 py-2 text-center`}>{linea}</td>
+                            ))}
                         </tr>
                         <tr className="bg-gray-300">
                             <td className="border border-gray-200 px-4 py-2">A. EFICACIA DE REMOCIÓN</td>
-                            <td className={`border border-gray-200 px-4 py-2 text-center`}></td>
-                            <td className={`border border-gray-200 px-4 py-2 text-center`}></td>
+                            {lineasTratamiento.map(linea => (
+                                <td key={linea} className={`border border-gray-200 px-4 py-2 text-center`}></td>
+                            ))}
                         </tr>
                         {subcriteriosA.map(subcriterio => (
                             <tr key={subcriterio}>
                                 <td className="border border-gray-200 px-4 py-2">{subcriterio}</td>
-                                <td className={`border border-gray-200 px-4 py-2 text-center`}>{valoresAgrupadosA[linea1]?.[subcriterio] || 0}</td>
-                                <td className={`border border-gray-200 px-4 py-2 text-center`}>{valoresAgrupadosA[linea2]?.[subcriterio] || 0}</td>
+                                {lineasTratamiento.map(linea => (
+                                    <td key={linea} className={`border border-gray-200 px-4 py-2 text-center`}>{valoresAgrupadosA[linea]?.[subcriterio] || 0}</td>
+                                ))}
                             </tr>
                         ))}
                         <tr className="bg-gray-300">
                             <td className="border border-gray-200 px-4 py-2">E. IMPACTOS AMBIENTALES</td>
-                            <td className={`border border-gray-200 px-4 py-2`}></td>
-                            <td className={`border border-gray-200 px-4 py-2`}></td>
+                            {lineasTratamiento.map(linea => (
+                                <td key={linea} className={`border border-gray-200 px-4 py-2`}></td>
+                            ))}
                         </tr>
                         {subcriteriosE.map(subcriterio => (
                             <tr key={subcriterio}>
                                 <td className="border border-gray-200 px-4 py-2">{subcriterio}</td>
-                                <td className={`border border-gray-200 px-4 py-2 text-center`}>{valoresAgrupadosE[linea1]?.[subcriterio] || 0}</td>
-                                <td className={`border border-gray-200 px-4 py-2 text-center }`}>{valoresAgrupadosE[linea2]?.[subcriterio] || 0}</td>
+                                {lineasTratamiento.map(linea => (
+                                    <td key={linea} className={`border border-gray-200 px-4 py-2 text-center`}>{valoresAgrupadosE[linea]?.[subcriterio] || 0}</td>
+                                ))}
                             </tr>
                         ))}
                         <tr className="bg-gray-300">
                             <td className="border border-gray-200 px-4 py-2">G. OPERACIÓN Y MANTENIMIENTO</td>
-                            <td className={`border border-gray-200 px-4 py-2 `}></td>
-                            <td className={`border border-gray-200 px-4 py-2 `}></td>
+                            {lineasTratamiento.map(linea => (
+                                <td key={linea} className={`border border-gray-200 px-4 py-2`}></td>
+                            ))}
                         </tr>
                         {subcriteriosG.map(subcriterio => (
                             <tr key={subcriterio}>
                                 <td className="border border-gray-200 px-4 py-2">{subcriterio}</td>
-                                <td className={`border border-gray-200 px-4 py-2 text-center`}>{valoresAgrupadosG[linea1]?.[subcriterio] || 0}</td>
-                                <td className={`border border-gray-200 px-4 py-2 text-center`}>{valoresAgrupadosG[linea2]?.[subcriterio] || 0}</td>
+                                {lineasTratamiento.map(linea => (
+                                    <td key={linea} className={`border border-gray-200 px-4 py-2 text-center`}>{valoresAgrupadosG[linea]?.[subcriterio] || 0}</td>
+                                ))}
                             </tr>
                         ))}
                         <tr className="bg-gray-300">
                             <td className="border border-gray-200 px-4 py-2">H. COSTOS</td>
-                            <td className={`border border-gray-200 px-4 py-2 `}></td>
-                            <td className={`border border-gray-200 px-4 py-2 `}></td>
+                            {lineasTratamiento.map(linea => (
+                                <td key={linea} className={`border border-gray-200 px-4 py-2`}></td>
+                            ))}
                         </tr>
                         {subcriteriosH.map(subcriterio => (
                             <tr key={subcriterio}>
                                 <td className="border border-gray-200 px-4 py-2">{subcriterio}</td>
-                                <td className={`border border-gray-200 px-4 py-2 text-center`}>{valoresAgrupadosH[linea1]?.[subcriterio] || 0}</td>
-                                <td className={`border border-gray-200 px-4 py-2 text-center`}>{valoresAgrupadosH[linea2]?.[subcriterio] || 0}</td>
+                                {lineasTratamiento.map(linea => (
+                                    <td key={linea} className={`border border-gray-200 px-4 py-2 text-center`}>{valoresAgrupadosH[linea]?.[subcriterio] || 0}</td>
+                                ))}
                             </tr>
                         ))}
-                        <tr className="bg-blue-400 text-white">
+                        <tr className="bg-blue-400 text-white font-semibold">
                             <td className="border border-gray-200 px-4 py-2">PUNTUACIÓN TOTAL</td>
-                            <td className={`border border-gray-200 px-4 py-2 text-center ${getRowClass(linea1)}`}>{puntuacionTotalLinea1}</td>
-                            <td className={`border border-gray-200 px-4 py-2 text-center ${getRowClass(linea2)}`}>{puntuacionTotalLinea2}</td>
+                            {lineasTratamiento.map(linea => (
+                                <td key={linea} className={`border border-gray-200 px-4 py-2 text-center ${getRowClass(linea)}`}>
+                                    {puntuacionesTotales[linea] || 0}
+                                </td>
+                            ))}
                         </tr>
-                        <tr className="bg-blue-400 text-white">
-                            <td className="border border-gray-200 px-4 py-2">LÍNEA DE TRATAMIENTO</td>
-                            <td className={`border border-gray-200 px-4 py-2 text-center ${getRowClass(linea1)}`}>{linea1}</td>
-                            <td className={`border border-gray-200 px-4 py-2 text-center ${getRowClass(linea2)}`}>{linea2}</td>
-                        </tr>
-                        <tr className="bg-blue-400 text-white">
-                            <td className="border border-gray-200 px-4 py-2">SELECCIÓN</td>
-                            <td className={`border border-gray-200 px-4 py-2 text-center ${getRowClass(linea1)}`}>
-                                <input
-                                    type="checkbox"
-                                    checked={selectedLine === linea1}
-                                    onChange={() => handleLineSelection(linea1)}
-                                />
-                            </td>
-                            <td className={`border border-gray-200 px-4 py-2 text-center ${getRowClass(linea2)}`}>
-                                <input
-                                    type="checkbox"
-                                    checked={selectedLine === linea2}
-                                    onChange={() => handleLineSelection(linea2)}
-                                />
-                            </td>
+                        <tr className="bg-blue-400 text-white font-semibold">
+                            <td className="border border-gray-200 px-4 py-2">SELECCIONAR LÍNEA</td>
+                            {lineasTratamiento.map(linea => (
+                                <td key={linea} className={`border border-gray-200 px-4 py-2 text-center ${getRowClass(linea)}`}>
+                                    <input
+                                        type="checkbox"
+                                        checked={selectedLine === linea}
+                                        onChange={(event) => handleLineSelection(event, linea)}
+                                        className="ml-2"
+                                    />
+                                    {" "+linea}
+                                </td>
+                            ))}
                         </tr>
                     </tbody>
                 </table>
-                <div className="mt-4 flex justify-center">
-                    <button
-                        className="bg-green-500 text-white px-4 py-2 rounded"
-                        onClick={saveSelection}
-                    >
-                        Guardar selección
+                <div className="flex justify-center mt-4">
+                    <button onClick={saveSelection} className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                        Guardar Selección
                     </button>
                 </div>
             </div>
