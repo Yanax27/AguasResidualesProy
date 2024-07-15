@@ -227,8 +227,76 @@ const getAlertForPoblacionHorizonte = () => {
   }
   return null;
   };
+ //para nitrogeno
+ const getAlertForNt = () => {
+  const ntValue = parseFloat(nt);
+  if (isNaN(ntValue)) {
+    return null;
+  }
 
+  if (ntValue < 20) {
+    return (
+      <Alert severity="warning">
+        El valor de contenido de nitrógeno total {ntValue} mg/L está fuera del rango de valores típicos de aguas residuales urbanas.
+      </Alert>
+    );
+  }
 
+  if (ntValue >= 20 && ntValue <= 85) {
+    return (
+      <Alert severity="success">
+        El valor de contenido de nitrógeno total {ntValue} mg/L es típico de aguas residuales urbanas.
+      </Alert>
+    );
+  }
+
+  if (ntValue > 85) {
+    return (
+      <Alert severity="warning">
+        El valor de contenido de nitrógeno total {ntValue} mg/L está fuera del rango de valores típicos de aguas residuales urbanas.
+      </Alert>
+    );
+  }
+
+  return null;
+};
+
+//para coliformes totales
+const getAlertForColiformesTotales = () => {
+  const coliformesValue = parseFloat(coliformes);
+  if (isNaN(coliformesValue)) {
+    return null;
+  }
+
+  const lowerLimit = Math.pow(10, 6); // 10^6
+  const upperLimit = Math.pow(10, 9); // 10^9
+
+  if (coliformesValue < lowerLimit) {
+    return (
+      <Alert severity="warning">
+        La concentración de Coliformes Totales {coliformesValue} NMP/100 mL está fuera del rango de valores típicos de aguas residuales urbanas.
+      </Alert>
+    );
+  }
+
+  if (coliformesValue >= lowerLimit && coliformesValue <= upperLimit) {
+    return (
+      <Alert severity="success">
+        La concentración de Coliformes Totales {coliformesValue} NMP/100 mL es típica de aguas residuales urbanas.
+      </Alert>
+    );
+  }
+
+  if (coliformesValue > upperLimit) {
+    return (
+      <Alert severity="warning">
+        La concentración de Coliformes Totales {coliformesValue} NMP/100 mL está fuera del rango de valores típicos de aguas residuales urbanas.
+      </Alert>
+    );
+  }
+
+  return null;
+};
 
   return (
     <div className="p-4">
@@ -315,7 +383,7 @@ const getAlertForPoblacionHorizonte = () => {
         {getAlertForDqo()}
         <div className="mb-4">
           <label htmlFor="coliformes" className="block text-gray-700 dark:text-gray-300 font-semibold">
-            Coliformes:  valores usuales () mg/L
+            Coliformes:  valores usuales (10^6 - 10^9) mg/L
           </label>
           <input
             type="number"
@@ -327,9 +395,10 @@ const getAlertForPoblacionHorizonte = () => {
             required
           />
         </div>
+        {getAlertForColiformesTotales()}
         <div className="mb-4">
           <label htmlFor="nt" className="block text-gray-700 dark:text-gray-300 font-semibold">
-            NT:  valores usuales () mg/L
+            NT:  valores usuales (20 - 85) mg/L
           </label>
           <input
             type="number"
@@ -341,9 +410,10 @@ const getAlertForPoblacionHorizonte = () => {
             required
           />
         </div>
+        {getAlertForNt()}
         <div className="mb-4">
           <label htmlFor="pt" className="block text-gray-700 dark:text-gray-300 font-semibold">
-            PT:  valores usuales () mg/L
+            PT:  valores usuales(4 - 15) mg/L
           </label>
           <input
             type="number"
@@ -355,6 +425,7 @@ const getAlertForPoblacionHorizonte = () => {
             required
           />
         </div>
+        {getAlertForPt()}
         <button
           type="submit"
           className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
@@ -397,38 +468,8 @@ const getAlertForPoblacionHorizonte = () => {
               </tbody>
             </table>
           </div>
-          <div className="overflow-x-auto shadow-md sm:rounded-lg mt-4 mb-4 max-w-md mx-auto">
-            <table className="w-full table-auto border-collapse border border-gray-200 bg-white">
-              <thead className="bg-red-400 text-white">
-                <tr>
-                  <th className="border border-gray-200 px-2 py-2">Parámetro</th>
-                  <th className="border border-gray-200 px-2 py-2">Valor Ingresado</th>
-                  <th className="border border-gray-200 px-2 py-2">Max. Admisible (Diario)</th>
-                  <th className="border border-gray-200 px-2 py-2">Rendimiento (%)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">Sólidos en suspensión</td>
-                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{solidosSuspension}</td>
-                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{ss}</td>
-                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{ssPorcentaje}%</td>
-                </tr>
-                <tr>
-                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">DBO5</td>
-                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo5}</td>
-                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo5Constant}</td>
-                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo5Porcentaje}%</td>
-                </tr>
-                <tr>
-                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">DQO</td>
-                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqo}</td>
-                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqoConstant}</td>
-                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqoPorcentaje}%</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        
+          <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6 text-center">Anexo-1</h3>
 
           <div className="overflow-x-auto shadow-md sm:rounded-lg mt-4 mb-4 max-w-md mx-auto">
             <table className="w-full table-auto border-collapse border border-gray-200 bg-white">
@@ -480,7 +521,39 @@ const getAlertForPoblacionHorizonte = () => {
               </tbody>
             </table>
           </div>
-
+          <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6 text-center" >Anexo-2</h3>
+          <div className="overflow-x-auto shadow-md sm:rounded-lg mt-4 mb-4 max-w-md mx-auto">
+            <table className="w-full table-auto border-collapse border border-gray-200 bg-white">
+              <thead className="bg-red-400 text-white">
+                <tr>
+                  <th className="border border-gray-200 px-2 py-2">Parámetro</th>
+                  <th className="border border-gray-200 px-2 py-2">Valor Ingresado</th>
+                  <th className="border border-gray-200 px-2 py-2">Max. Admisible (Diario)</th>
+                  <th className="border border-gray-200 px-2 py-2">Rendimiento (%)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">Sólidos en suspensión</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{solidosSuspension}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{ss}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{ssPorcentaje}%</td>
+                </tr>
+                <tr>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">DBO5</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo5}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo5Constant}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo5Porcentaje}%</td>
+                </tr>
+                <tr>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">DQO</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqo}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqoConstant}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqoPorcentaje}%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <div className="overflow-x-auto shadow-md sm:rounded-lg mb-4">
             <table className="w-full table-auto border-collapse border border-gray-200 bg-white">
               <thead className="bg-green-400 text-white">
@@ -491,6 +564,7 @@ const getAlertForPoblacionHorizonte = () => {
                   <th className="border border-gray-200 px-4 py-2">DQO (%)</th>
                   <th className="border border-gray-200 px-4 py-2">NT (%)</th>
                   <th className="border border-gray-200 px-4 py-2">PT (%)</th>
+                  <th className="border border-gray-200 px-4 py-2">Coliformes (%)</th>
                 </tr>
               </thead>
               <tbody>
@@ -503,6 +577,7 @@ const getAlertForPoblacionHorizonte = () => {
                       <td className="px-6 py-4 text-sm text-gray-500 border border-gray-200 text-center">{line.DQO}</td>
                       <td className="px-6 py-4 text-sm text-gray-500 border border-gray-200 text-center">{line.NT}</td>
                       <td className="px-6 py-4 text-sm text-gray-500 border border-gray-200 text-center">{line.PT}</td>
+                      <td className="px-6 py-4 text-sm text-gray-500 border border-gray-200 text-center">{line.Coliformes_fecales}</td>
                     </tr>
                   ))
                 ) : (
