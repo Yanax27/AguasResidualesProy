@@ -135,7 +135,6 @@ function Paso4() {
               </thead>
               <tbody>
                 <tr>
-                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">Sólidos en suspensión</td>
                   <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{solidosSuspension}</td>
                   <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{ss}</td>
                   <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{ss1Porcentaje}%</td>
