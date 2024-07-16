@@ -24,11 +24,22 @@ function Paso4() {
     const ss = 60.0;
     const dbo5Constant = 80.0;
     const dqoConstant = 250.0;
+    
+    //constantes para anexo 1
+    const ss1 = 100;
+    const dbo1 = 30;
+    const dqo1 = 60;
+    const nt1 = 12;
+    const pt1 = 1;
+    const coliformes1 = 5000;
 
     //cargamos los valores de guardadso en el paso2 de ss, dbo5 y dqo para calcular los redimientos
     const [solidosSuspension, setSolidosSuspension] = useState(() => localStorage.getItem('solidosSuspension') || '');
     const [dbo5, setDbo5] = useState(() => localStorage.getItem('dbo5') || '');
     const [dqo, setDqo] = useState(() => localStorage.getItem('dqo') || '');
+    const [nt, setNt] = useState(()=> localStorage.getItem('nt')|| '');
+    const [pt, setPt] = useState(()=> localStorage.getItem('pt') || '');
+    const [coliformes, setColiformes] = useState(()=> localStorage.getItem('coliformesTotales') || '');
 
     // Cálculos de porcentajes de reducción
     const calcularPorcentajeReduccion = (valorInicial, valorConstante) => {
@@ -38,7 +49,13 @@ function Paso4() {
     const dbo5Porcentaje = dbo5 ? calcularPorcentajeReduccion(dbo5, dbo5Constant).toFixed(2) : 0;
     const ssPorcentaje = solidosSuspension ? calcularPorcentajeReduccion(solidosSuspension, ss).toFixed(2) : 0;
     const dqoPorcentaje = dqo ? calcularPorcentajeReduccion(dqo, dqoConstant).toFixed(2) : 0;
-
+    const ptPorcentaje = pt ? calcularPorcentajeReduccion(pt, pt1).toFixed(2) : 0;
+    const ntPorcentaje = nt ? calcularPorcentajeReduccion(nt, nt1).toFixed(2) : 0;
+    const coliformesPorcentaje = coliformes ? calcularPorcentajeReduccion(coliformes, coliformes1).toFixed(2) : 0;
+    const dbo1Porcentaje = dbo5 ? calcularPorcentajeReduccion(dbo5, dbo1).toFixed(2) : 0;
+    const ss1Porcentaje = solidosSuspension ? calcularPorcentajeReduccion(solidosSuspension, ss1).toFixed(2) : 0;
+    const dqo1Porcentaje = dqo ? calcularPorcentajeReduccion(dqo, dqo1).toFixed(2) : 0;
+  
 
     useEffect(() => {
 
@@ -104,39 +121,91 @@ function Paso4() {
                 A continuación tiene listadas las Líneas de Tratamiento elegidas en la 'Selección Previa'. Marque aquellas Líneas de Tratamiento que cumplen los criterios previamente detallados acerca de la eficacia de remoción:            </p>
 
             <Tabla4_1 setSelectedRowsTabla4_1={setSelectedRowsTabla4_1} />
-            <div className="overflow-x-auto shadow-md sm:rounded-lg mt-4 mb-4 max-w-md mx-auto">
-                <table className="w-full table-auto border-collapse border border-gray-200 bg-white">
-                    <thead className="bg-green-400 text-white">
-                        <tr>
-                            <th className="border border-gray-200 px-2 py-2">Parámetro</th>
-                            <th className="border border-gray-200 px-2 py-2">Valor Ingresado</th>
-                            <th className="border border-gray-200 px-2 py-2">Max. Admisible (Diario)</th>
-                            <th className="border border-gray-200 px-2 py-2">Rendimiento (%)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">Sólidos en suspensión</td>
-                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{solidosSuspension}</td>
-                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{ss}</td>
-                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{ssPorcentaje}%</td>
-                        </tr>
-                        <tr>
-                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">DBO5</td>
-                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo5}</td>
-                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo5Constant}</td>
-                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo5Porcentaje}%</td>
-                        </tr>
-                        <tr>
-                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">DQO</td>
-                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqo}</td>
-                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqoConstant}</td>
-                            <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqoPorcentaje}%</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6 text-center">Anexo-1</h3>
 
+          <div className="overflow-x-auto shadow-md sm:rounded-lg mt-4 mb-4 max-w-md mx-auto">
+            <table className="w-full table-auto border-collapse border border-gray-200 bg-white">
+              <thead className="bg-green-400 text-white">
+                <tr>
+                  <th className="border border-gray-200 px-2 py-2">Parámetro</th>
+                  <th className="border border-gray-200 px-2 py-2">Valor Ingresado</th>
+                  <th className="border border-gray-200 px-2 py-2">Max. Admisible (Diario)</th>
+                  <th className="border border-gray-200 px-2 py-2">Rendimiento (%)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">Sólidos en suspensión</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{solidosSuspension}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{ss}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{ss1Porcentaje}%</td>
+                </tr>
+                <tr>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">DBO5</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo5}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo1}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo1Porcentaje}%</td>
+                </tr>
+                <tr>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">DQO</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqo}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqo1}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqo1Porcentaje}%</td>
+                </tr>
+                <tr>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">PT</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{pt}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{pt1}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{ptPorcentaje}%</td>
+                </tr>
+                <tr>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">NT</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{nt}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{nt1}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{ntPorcentaje}%</td>
+                </tr>
+                <tr>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">Coliformes</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{coliformes}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{coliformes1}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{coliformesPorcentaje}%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6 text-center" >Anexo-2</h3>
+          <div className="overflow-x-auto shadow-md sm:rounded-lg mt-4 mb-4 max-w-md mx-auto">
+            <table className="w-full table-auto border-collapse border border-gray-200 bg-white">
+              <thead className="bg-green-400 text-white">
+                <tr>
+                  <th className="border border-gray-200 px-2 py-2">Parámetro</th>
+                  <th className="border border-gray-200 px-2 py-2">Valor Ingresado</th>
+                  <th className="border border-gray-200 px-2 py-2">Max. Admisible (Diario)</th>
+                  <th className="border border-gray-200 px-2 py-2">Rendimiento (%)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">Sólidos en suspensión</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{solidosSuspension}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{ss}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{ssPorcentaje}%</td>
+                </tr>
+                <tr>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">DBO5</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo5}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo5Constant}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo5Porcentaje}%</td>
+                </tr>
+                <tr>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">DQO</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqo}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqoConstant}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqoPorcentaje}%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
             <span className="flex items-center mb-2">
                 <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6">4.2. Terrenos disponibles para la implantación de la PTAR</h3>
                 <span className="h-px flex-1 bg-black"></span>
@@ -221,11 +290,11 @@ function Paso4() {
                 (*) Los costos son estimados a efectos de comparación solamente, el presupuesto del proyecto debe determinarse a partir del Diseño Final
             </p>
             <div className="flex justify-center mt-4">
-            <button onClick={handleSaveSelectedRows} className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700">
-                Guardar Selección
-            </button>
-      </div>
-            
+                <button onClick={handleSaveSelectedRows} className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700">
+                    Guardar Selección
+                </button>
+            </div>
+
         </div>
     )
 }
