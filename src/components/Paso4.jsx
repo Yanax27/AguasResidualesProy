@@ -24,6 +24,7 @@ function Paso4() {
     const ss = 60.0;
     const dbo5Constant = 80.0;
     const dqoConstant = 250.0;
+    const coliformes0 = 1000;
     
     //constantes para anexo 1
     const ss1 = 100;
@@ -55,7 +56,7 @@ function Paso4() {
     const dbo1Porcentaje = dbo5 ? calcularPorcentajeReduccion(dbo5, dbo1).toFixed(2) : 0;
     const ss1Porcentaje = solidosSuspension ? calcularPorcentajeReduccion(solidosSuspension, ss1).toFixed(2) : 0;
     const dqo1Porcentaje = dqo ? calcularPorcentajeReduccion(dqo, dqo1).toFixed(2) : 0;
-  
+    const coliformesPorcentaj0 = coliformes ? calcularPorcentajeReduccion(coliformes, coliformes0).toFixed(2) : 0;
 
     useEffect(() => {
 
@@ -134,11 +135,7 @@ function Paso4() {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{solidosSuspension}</td>
-                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{ss}</td>
-                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{ss1Porcentaje}%</td>
-                </tr>
+             
                 <tr>
                   <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">DBO5</td>
                   <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo5}</td>
@@ -201,6 +198,12 @@ function Paso4() {
                   <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqo}</td>
                   <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqoConstant}</td>
                   <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqoPorcentaje}%</td>
+                </tr>
+                <tr>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">Coliformes</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{coliformes}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{coliformes0}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{coliformesPorcentaj0}%</td>
                 </tr>
               </tbody>
             </table>

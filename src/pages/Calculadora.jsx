@@ -17,6 +17,7 @@ const Calculadora = () => {
   const ss = 60.0;
   const dbo5Constant = 80.0;
   const dqoConstant = 250.0;
+  const coliformes0 = 1000;
 
   const ss1 = 100;
   const dbo1 = 30;
@@ -67,6 +68,7 @@ const Calculadora = () => {
   const dbo1Porcentaje = dbo5 ? calcularPorcentajeReduccion(dbo5, dbo1).toFixed(2) : 0;
   const ss1Porcentaje = solidosSuspension ? calcularPorcentajeReduccion(solidosSuspension, ss1).toFixed(2) : 0;
   const dqo1Porcentaje = dqo ? calcularPorcentajeReduccion(dqo, dqo1).toFixed(2) : 0;
+  const coliformesPorcentaj0 = coliformes ? calcularPorcentajeReduccion(coliformes, coliformes0).toFixed(2) : 0;
 
   const checkCompliance = (value, target) => {
     return parseFloat(value) >= parseFloat(target) - 5 && parseFloat(value) <= parseFloat(target) + 5;
@@ -483,12 +485,6 @@ const getAlertForColiformesTotales = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">Sólidos en suspensión</td>
-                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{solidosSuspension}</td>
-                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{ss}</td>
-                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{ss1Porcentaje}%</td>
-                </tr>
-                <tr>
                   <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">DBO5</td>
                   <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo5}</td>
                   <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dbo1}</td>
@@ -521,7 +517,7 @@ const getAlertForColiformesTotales = () => {
               </tbody>
             </table>
           </div>
-          <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6 text-center" >Anexo-2</h3>
+          <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6 text-center" >Anexo A-2</h3>
           <div className="overflow-x-auto shadow-md sm:rounded-lg mt-4 mb-4 max-w-md mx-auto">
             <table className="w-full table-auto border-collapse border border-gray-200 bg-white">
               <thead className="bg-red-400 text-white">
@@ -550,6 +546,12 @@ const getAlertForColiformesTotales = () => {
                   <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqo}</td>
                   <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqoConstant}</td>
                   <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{dqoPorcentaje}%</td>
+                </tr>
+                <tr>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">Coliformes</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{coliformes}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{coliformes0}</td>
+                  <td className="px-2 py-2 text-sm text-gray-500 border border-gray-200">{coliformesPorcentaj0}%</td>
                 </tr>
               </tbody>
             </table>
@@ -598,3 +600,4 @@ const getAlertForColiformesTotales = () => {
 };
 
 export default Calculadora;
+
