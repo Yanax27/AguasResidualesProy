@@ -122,7 +122,7 @@ function Paso4() {
                 A continuación tiene listadas las Líneas de Tratamiento elegidas en la 'Selección Previa'. Marque aquellas Líneas de Tratamiento que cumplen los criterios previamente detallados acerca de la eficacia de remoción:            </p>
 
             <Tabla4_1 setSelectedRowsTabla4_1={setSelectedRowsTabla4_1} />
-            <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6 text-center">Anexo-1</h3>
+            <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6 text-center">Anexo A-1</h3>
 
           <div className="overflow-x-auto shadow-md sm:rounded-lg mt-4 mb-4 max-w-md mx-auto">
             <table className="w-full table-auto border-collapse border border-gray-200 bg-white">
@@ -169,7 +169,7 @@ function Paso4() {
               </tbody>
             </table>
           </div>
-          <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6 text-center" >Anexo-2</h3>
+          <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6 text-center" >Anexo A-2</h3>
           <div className="overflow-x-auto shadow-md sm:rounded-lg mt-4 mb-4 max-w-md mx-auto">
             <table className="w-full table-auto border-collapse border border-gray-200 bg-white">
               <thead className="bg-green-400 text-white">

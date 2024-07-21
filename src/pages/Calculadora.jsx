@@ -471,7 +471,7 @@ const getAlertForColiformesTotales = () => {
             </table>
           </div>
         
-          <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6 text-center">Anexo-1</h3>
+          <h3 className=" text-lg font-semibold text-gray-800 dark:text-white pr-6 text-center">Anexo A-1</h3>
 
           <div className="overflow-x-auto shadow-md sm:rounded-lg mt-4 mb-4 max-w-md mx-auto">
             <table className="w-full table-auto border-collapse border border-gray-200 bg-white">
