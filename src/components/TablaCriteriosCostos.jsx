@@ -65,7 +65,7 @@ function TablaCriteriosCostos({ lineas, subcriterios, criteriosSeleccionados, ti
     useEffect(() => {
         const datos = recolectarDatos();
         onSave(datos);
-        console.log("imprimiendo onSave: ", datos)
+        //console.log("imprimiendo onSave: ", datos)
     }, [valoraciones]);
 
 

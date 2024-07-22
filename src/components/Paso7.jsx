@@ -1,15 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CriterioA from './CriterioPaso7/CriterioA';
+import CriterioB from './CriterioPaso7/CriterioB';
+import CriterioC from './CriterioPaso7/CriterioC';
+import CriterioD from './CriterioPaso7/CriterioD';
 import CriterioE from './CriterioPaso7/CriterioE';
+import CriterioF from './CriterioPaso7/CriterioF';
 import CriterioG from './CriterioPaso7/CriterioG';
 import CriterioH from './CriterioPaso7/CriterioH';
 
-
 const Paso7 = () => {
     const [valoresCriterioA, setValoresCriterioA] = useState([]);
+    const [valoresCriterioB, setValoresCriterioB] = useState([]);
+    const [valoresCriterioC, setValoresCriterioC] = useState([]);
+    const [valoresCriterioD, setValoresCriterioD] = useState([]);
     const [valoresCriterioE, setValoresCriterioE] = useState([]);
+    const [valoresCriterioF, setValoresCriterioF] = useState([]);
     const [valoresCriterioG, setValoresCriterioG] = useState([]);
     const [valoresCriterioH, setValoresCriterioH] = useState([]);
+
+    const [criteriosSeleccionados, setCriteriosSeleccionados] = useState([]);
+
+    useEffect(() => {
+        const criteriosGuardados = JSON.parse(localStorage.getItem('criteriosSeleccionados')) || [];
+        setCriteriosSeleccionados(criteriosGuardados);
+    }, []);
 
     const handleSaveCriterios = (nuevosDatos, criterio) => {
         if (Array.isArray(nuevosDatos)) {
@@ -18,8 +32,28 @@ const Paso7 = () => {
                     const filteredDatos = prevDatos.filter(data => data.subcriterio !== nuevosDatos[0].subcriterio);
                     return [...filteredDatos, ...nuevosDatos];
                 });
+            } else if (criterio === 'B') {
+                setValoresCriterioB((prevDatos) => {
+                    const filteredDatos = prevDatos.filter(data => data.subcriterio !== nuevosDatos[0].subcriterio);
+                    return [...filteredDatos, ...nuevosDatos];
+                });
+            } else if (criterio === 'C') {
+                setValoresCriterioC((prevDatos) => {
+                    const filteredDatos = prevDatos.filter(data => data.subcriterio !== nuevosDatos[0].subcriterio);
+                    return [...filteredDatos, ...nuevosDatos];
+                });
+            } else if (criterio === 'D') {
+                setValoresCriterioD((prevDatos) => {
+                    const filteredDatos = prevDatos.filter(data => data.subcriterio !== nuevosDatos[0].subcriterio);
+                    return [...filteredDatos, ...nuevosDatos];
+                });
             } else if (criterio === 'E') {
                 setValoresCriterioE((prevDatos) => {
+                    const filteredDatos = prevDatos.filter(data => data.subcriterio !== nuevosDatos[0].subcriterio);
+                    return [...filteredDatos, ...nuevosDatos];
+                });
+            } else if (criterio === 'F') {
+                setValoresCriterioF((prevDatos) => {
                     const filteredDatos = prevDatos.filter(data => data.subcriterio !== nuevosDatos[0].subcriterio);
                     return [...filteredDatos, ...nuevosDatos];
                 });
@@ -43,10 +77,18 @@ const Paso7 = () => {
 
     const handleGuardar = () => {
         localStorage.setItem('valoresCriterioA', JSON.stringify(valoresCriterioA));
+        localStorage.setItem('valoresCriterioB', JSON.stringify(valoresCriterioB));
+        localStorage.setItem('valoresCriterioC', JSON.stringify(valoresCriterioC));
+        localStorage.setItem('valoresCriterioD', JSON.stringify(valoresCriterioD));
         localStorage.setItem('valoresCriterioE', JSON.stringify(valoresCriterioE));
+        localStorage.setItem('valoresCriterioF', JSON.stringify(valoresCriterioF));
         localStorage.setItem('valoresCriterioG', JSON.stringify(valoresCriterioG));
         localStorage.setItem('valoresCriterioH', JSON.stringify(valoresCriterioH));
         alert('Valores guardados exitosamente');
+    };
+
+    const criterioSeleccionado = (criterio) => {
+        return criteriosSeleccionados.some(c => c.criterio.includes(criterio));
     };
 
     return (
@@ -64,18 +106,23 @@ const Paso7 = () => {
                 <li>• 5 mayor valoración</li>
                 <li>• 1 menor valoración</li>
             </ul>
-            <CriterioA onSaveCriterios={(datos) => handleSaveCriterios(datos, 'A')} />
-            <CriterioE onSaveCriterios={(datos) => handleSaveCriterios(datos, 'E')} />
-            <CriterioG onSaveCriterios={(datos) => handleSaveCriterios(datos, 'G')} />
-            <CriterioH onSaveCriterios={(datos) => handleSaveCriterios(datos, 'H')} />
-            <button
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
-                onClick={handleGuardar}
-            >
-                Guardar
-            </button>
+            {criterioSeleccionado('A') && <CriterioA onSaveCriterios={(datos) => handleSaveCriterios(datos, 'A')} />}
+            {criterioSeleccionado('B') && <CriterioB onSaveCriterios={(datos) => handleSaveCriterios(datos, 'B')} />}
+            {criterioSeleccionado('C') && <CriterioC onSaveCriterios={(datos) => handleSaveCriterios(datos, 'C')} />}
+            {criterioSeleccionado('D') && <CriterioD onSaveCriterios={(datos) => handleSaveCriterios(datos, 'D')} />}
+            {criterioSeleccionado('E') && <CriterioE onSaveCriterios={(datos) => handleSaveCriterios(datos, 'E')} />}
+            {criterioSeleccionado('F') && <CriterioF onSaveCriterios={(datos) => handleSaveCriterios(datos, 'F')} />}
+            {criterioSeleccionado('G') && <CriterioG onSaveCriterios={(datos) => handleSaveCriterios(datos, 'G')} />}
+            {criterioSeleccionado('H') && <CriterioH onSaveCriterios={(datos) => handleSaveCriterios(datos, 'H')} />}
+            <div className="flex justify-center mt-4">
+                <button
+                    onClick={handleGuardar}
+                    className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700"
+                >
+                    Guardar
+                </button>
+            </div>
         </div>
-
     );
 };
 

@@ -132,7 +132,7 @@ const Paso9 = () => {
               <td className="border px-4 py-2">{lineDetails.linea}</td>
               <td className="border px-4 py-2">{lineDetails.descripcion}</td>
               <td className="border px-4 py-2">{lineDetails.lineaAgua}</td>
-              <td className="border px-4 py-2">{lineDetails.lineaLodos}</td>
+              <td className="border px-4 py-2 text-center">{lineDetails.lineaLodos}</td>
             </tr>
           </tbody>
         </table>
